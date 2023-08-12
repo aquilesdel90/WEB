@@ -1,0 +1,86 @@
+/* App.css */
+body,
+html {
+  margin: 0;
+  padding: 0;
+}
+
+nav {
+  background-color: #333;
+  padding: 10px;
+}
+
+nav ul {
+  list-style: none;
+  display: flex;
+  justify-content: center;
+  margin: 0;
+  padding: 0;
+}
+
+nav li {
+  margin: 0 10px;
+}
+
+nav a {
+  color: #fff;
+  text-decoration: none;
+  cursor: pointer;
+}
+
+.page-nav {
+  display: flex;
+  justify-content: center;
+  margin-top: 20px;
+}
+
+.page-dot {
+  width: 12px;
+  height: 12px;
+  border-radius: 50%;
+  background-color: #bbb;
+  margin: 0 5px;
+}
+
+.page-dot.active {
+  background-color: #333;
+}
+
+/* App.css */
+.flicking {
+  width: 100%;
+  height: 300px; /* Ajusta la altura según tus necesidades */
+}
+
+.flicking-panel {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  height: 100%;
+  font-size: 24px;
+  background-color: #f1c40f; /* Color de fondo de los slides */
+  color: #333;
+}
+
+.card:hover {
+  background-blend-mode: lighten;
+  background-color: rgb(249, 0, 0); /* Color azul claro */
+}
+
+.custom-card:hover {
+  background-blend-mode: lighten;
+  background-color: rgb(255, 238, 2); /* Color azul claro */
+}
+
+/* Estilos para la línea de separación */
+.section-divider {
+  border-top: 1px solid #ccc;
+  margin: 20px 0;
+}
+
+/* Estilos para los títulos de sección */
+h2 {
+  font-size: 24px;
+  margin: 10px 0;
+}

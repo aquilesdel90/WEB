@@ -1,0 +1,67 @@
+/* assets/styles/videoWithCharacters.css */
+/* Estilos para el contenedor principal */
+.video-with-characters {
+  position: relative;
+  width: 100%;
+  height: 95vh;
+  overflow: hidden;
+}
+
+/* Estilos para el video de fondo */
+.background-video {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  z-index: -1; /* Ubica el video detrás de las imágenes */
+}
+
+/* Estilos para el contenedor de imágenes de personajes */
+.character-images {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: flex-end;
+  flex-wrap: wrap;
+  z-index: 1; /* Ubica las imágenes sobre el video */
+}
+
+.character-images .character-item {
+  width: 140px;
+  height: 120px;
+  cursor: pointer;
+  border: 1px solid transparent;
+  margin: 5px;
+  position: relative;
+  transition: border-width 0.2s;
+}
+
+.character-images img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.character-images .character-item.selected {
+  border-color: #8a2be2;
+  border-width: 4px;
+}
+
+/* Media query para dispositivos móviles con un ancho máximo de 768px */
+@media (max-width: 768px) {
+  .character-images .character-item {
+    width: 90px;
+    height: 65px;
+  }
+
+  .character-images {
+    display: flex;
+    flex-direction: column;
+  }
+}
