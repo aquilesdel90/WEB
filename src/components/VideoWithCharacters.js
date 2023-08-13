@@ -21,7 +21,7 @@ const VideoWithCharacters = () => {
   ];
 
   const [selectedCharacter, setSelectedCharacter] = useState(personajes[0].id);
-  const videoRef = useRef(null);
+  const videoRef = useRef(null); 
 
   const handleCharacterClick = (characterId) => {
     setSelectedCharacter(characterId);
