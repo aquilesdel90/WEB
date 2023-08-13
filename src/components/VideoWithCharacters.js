@@ -5,7 +5,7 @@ import personaje3 from "../assets/personajes/personaje3.jpg";
 import personaje4 from "../assets/personajes/personaje4.jpg";
 import personaje5 from "../assets/personajes/personaje5.jpg";
 import agua from "../assets/videos/agua.webm";
-import aire from "s3://gunnyvideos/aire.webm";
+import aire from "../assets/videos/aire.webm";
 import tierra from "../assets/videos/tierra.webm";
 import fuego from "../assets/videos/fuego.webm";
 import video5 from "../assets/videos/Comp_1.webm";
