@@ -2,8 +2,8 @@
 /* Estilos para el contenedor principal */
 .video-with-characters {
   position: relative;
-  width: 100%;
-  height: 95vh;
+
+  height: 100vh;
   overflow: hidden;
 }
 
@@ -12,10 +12,13 @@
   position: absolute;
   top: 0;
   left: 0;
-  width: 100%;
-  height: 100%;
+
   object-fit: cover;
   z-index: -1; /* Ubica el video detrás de las imágenes */
+}
+
+.background-video video {
+  max-width: none;
 }
 
 /* Estilos para el contenedor de imágenes de personajes */

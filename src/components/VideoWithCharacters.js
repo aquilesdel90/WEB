@@ -1,4 +1,5 @@
 import React, { useState, useRef } from "react";
+import ReactPlayer from "react-player";
 import personaje1 from "../assets/personajes/personaje1.jpg";
 import personaje2 from "../assets/personajes/personaje2.jpg";
 import personaje3 from "../assets/personajes/personaje3.jpg";
@@ -21,7 +22,7 @@ const VideoWithCharacters = () => {
   ];
 
   const [selectedCharacter, setSelectedCharacter] = useState(personajes[0].id);
-  const videoRef = useRef(null); 
+  const videoRef = useRef(null);
 
   const handleCharacterClick = (characterId) => {
     setSelectedCharacter(characterId);
@@ -42,16 +43,19 @@ const VideoWithCharacters = () => {
 
   return (
     <div className="video-with-characters">
-      <video
+      <ReactPlayer
         ref={videoRef}
         className="background-video"
-        autoPlay
+        playing
+        loop
         muted
-        src={
+        url={
           personajes.find((personaje) => personaje.id === selectedCharacter)
             .video
         }
         onEnded={handleVideoEnded}
+        width="none"
+        height="none"
       />
       <div className="character-images">
         {personajes.map((personaje) => (

@@ -7,11 +7,11 @@ function Navbar() {
   const [isScrolled, setIsScrolled] = useState(false);
 
   const links = [
-    { text: "HOME", to: "section1" },
-    { text: "WEAPONS", to: "section2" },
-    { text: "INUGIS", to: "section3" },
-    { text: "CHAMPIONS", to: "section4" },
-    { text: "ROADMAP", to: "section5" },
+    { text: "HOME", to: "home" },
+    { text: "NARRATIVE", to: "narrative" },
+    { text: "INUGIS", to: "inugis" },
+    { text: "CHAMPIONS", to: "champions" },
+    { text: "ROADMAP", to: "roadmap" },
   ];
 
   useEffect(() => {
@@ -53,7 +53,7 @@ function Navbar() {
                   spy={true}
                   smooth={true}
                   duration={500}
-                  className={`text-white hover:text-amber ${
+                  className={`cursor-pointer text-white hover:text-amber ${
                     isScrolled ? "text-black" : "text-white"
                   } transition-colors duration-300`}
                 >
