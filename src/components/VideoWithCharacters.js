@@ -14,7 +14,26 @@ const VideoWithCharacters = () => {
       image: personaje1,
       video: "https://gunnyvideos.s3.amazonaws.com/tierra.webm",
     },
-    // ... Rest of the personajes array ...
+    {
+      id: 2,
+      image: personaje2,
+      video: "https://gunnyvideos.s3.amazonaws.com/agua.webm",
+    },
+    {
+      id: 3,
+      image: personaje3,
+      video: "https://gunnyvideos.s3.amazonaws.com/Comp_1.webm",
+    },
+    {
+      id: 4,
+      image: personaje4,
+      video: "https://gunnyvideos.s3.amazonaws.com/Comp_1.webm",
+    },
+    {
+      id: 5,
+      image: personaje5,
+      video: "https://gunnyvideos.s3.amazonaws.com/fuego.webm",
+    },
   ];
 
   const [selectedCharacter, setSelectedCharacter] = useState(personajes[0].id);
