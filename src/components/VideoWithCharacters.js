@@ -5,20 +5,16 @@ import personaje2 from "../assets/personajes/personaje2.jpg";
 import personaje3 from "../assets/personajes/personaje3.jpg";
 import personaje4 from "../assets/personajes/personaje4.jpg";
 import personaje5 from "../assets/personajes/personaje5.jpg";
-import agua from "../assets/videos/agua.webm";
-import aire from "../assets/videos/aire.webm";
-import tierra from "../assets/videos/tierra.webm";
-import fuego from "../assets/videos/fuego.webm";
-import video5 from "../assets/videos/Comp_1.webm";
 import "../assets/styles/VideoWithCharacters.css";
 
 const VideoWithCharacters = () => {
   const personajes = [
-    { id: 1, image: personaje1, video: tierra },
-    { id: 2, image: personaje2, video: agua },
-    { id: 3, image: personaje3, video: video5 },
-    { id: 4, image: personaje4, video: aire },
-    { id: 5, image: personaje5, video: fuego },
+    {
+      id: 1,
+      image: personaje1,
+      video: "https://gunnyvideos.s3.amazonaws.com/tierra.webm",
+    },
+    // ... Rest of the personajes array ...
   ];
 
   const [selectedCharacter, setSelectedCharacter] = useState(personajes[0].id);
