@@ -37,10 +37,15 @@ const VideoWithCharacters = () => {
   ];
 
   const [selectedCharacter, setSelectedCharacter] = useState(personajes[0].id);
+  const [isVideoLoading, setIsVideoLoading] = useState(true);
   const videoRef = useRef(null);
 
   const handleCharacterClick = (characterId) => {
     setSelectedCharacter(characterId);
+  };
+
+  const handleVideoReady = () => {
+    setIsVideoLoading(false); // El video está listo, ya no está cargando
   };
 
   const handleVideoEnded = () => {

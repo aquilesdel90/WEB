@@ -5,7 +5,6 @@ import "@egjs/react-flicking/dist/flicking.css";
 import pagina1 from "../assets/carrusel/pagina_1.jpg";
 import pagina2 from "../assets/carrusel/pagina_2.jpg";
 import pagina3 from "../assets/carrusel/pagina_3.jpg";
-import narrative from "../assets/imgs/narrative.png";
 
 const Carrusel = () => {
   const plugins = [

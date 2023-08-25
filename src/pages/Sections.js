@@ -1,17 +1,11 @@
 import React from "react";
-import {
-  Link,
-  Element,
-  Events,
-  animateScroll as scroll,
-  scrollSpy,
-  scroller,
-} from "react-scroll";
+import { Element, Events, scrollSpy } from "react-scroll";
 import Home from "./Home";
 import SectionNarrative from "./SectionNarrative";
 import SectionInugis from "./SectionInugis";
 import SectionChampions from "./SectionChampions";
 import Roadmap from "../components/Roadmap";
+import VideoWithCharacters from "../components/VideoWithCharacters";
 
 const Sections = () => {
   // Configura scrollSpy para rastrear el scroll y activar el resaltado del enlace activo
@@ -37,7 +31,7 @@ const Sections = () => {
         <SectionInugis />
       </Element>
       <Element id="champions">
-        <SectionChampions />
+        <VideoWithCharacters />
       </Element>
       <Element id="roadmap">
         <Roadmap />

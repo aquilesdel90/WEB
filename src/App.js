@@ -1,10 +1,11 @@
 import React, { useEffect, useState } from "react";
-import { Element, Events, scrollSpy } from "react-scroll";
+import { scrollSpy } from "react-scroll";
 import Navbar from "./components/Navbar";
 
 import Loading from "./components/Loading";
 
 import Sections from "./pages/Sections";
+import Footer from "./components/Footer";
 
 const App = () => {
   const [isLoading, setIsLoading] = useState(true);
@@ -25,6 +26,7 @@ const App = () => {
     <>
       <Navbar />
       <Sections />
+      <Footer />
     </>
   );
 };

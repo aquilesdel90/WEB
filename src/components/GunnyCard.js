@@ -1,7 +1,6 @@
 import React, { useEffect, useRef } from "react";
 import "../assets/styles/Card.scss";
 
-import inugis_background from "../assets/fondos/inugis_background.png";
 const GunnyCard = () => {
   const cardRef = useRef(null);
   const styleRef = useRef(null);

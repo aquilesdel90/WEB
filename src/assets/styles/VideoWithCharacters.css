@@ -1,8 +1,6 @@
-/* assets/styles/videoWithCharacters.css */
-/* Estilos para el contenedor principal */
+/* Estilos generales para el contenedor principal */
 .video-with-characters {
   position: relative;
-
   height: 100vh;
   overflow: hidden;
 }
@@ -12,9 +10,8 @@
   position: absolute;
   top: 0;
   left: 0;
-
   object-fit: cover;
-  z-index: -1; /* Ubica el video detrás de las imágenes */
+  z-index: -1;
 }
 
 .background-video video {
@@ -32,10 +29,11 @@
   justify-content: center;
   align-items: flex-end;
   flex-wrap: wrap;
-  z-index: 1; /* Ubica las imágenes sobre el video */
+  z-index: 1;
 }
 
-.character-images .character-item {
+/* Estilos para cada cuadro de personaje */
+.character-item {
   width: 140px;
   height: 120px;
   cursor: pointer;
@@ -43,6 +41,9 @@
   margin: 5px;
   position: relative;
   transition: border-width 0.2s;
+  opacity: 0;
+  transform: translateX(-20px);
+  animation: slideIn 1s ease-in-out forwards;
 }
 
 .character-images img {
@@ -54,6 +55,17 @@
 .character-images .character-item.selected {
   border-color: #8a2be2;
   border-width: 4px;
+}
+
+@keyframes slideIn {
+  from {
+    opacity: 0;
+    transform: translateX(-20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateX(0);
+  }
 }
 
 /* Media query para dispositivos móviles con un ancho máximo de 768px */

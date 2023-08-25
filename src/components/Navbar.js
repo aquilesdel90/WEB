@@ -1,7 +1,9 @@
+/* eslint-disable jsx-a11y/anchor-is-valid */
 import React, { useState, useEffect } from "react";
 import { FaTelegram, FaTwitter } from "react-icons/fa";
 import gunnyLogo from "../assets/imgs/gunny-logo.png";
 import { Link } from "react-scroll";
+import "../assets/styles/Navbar.css";
 
 function Navbar() {
   const [isScrolled, setIsScrolled] = useState(false);
@@ -48,14 +50,15 @@ function Navbar() {
             {links.map((link, index) => (
               <li key={index}>
                 <Link
-                  activeClass="active"
                   to={link.to}
                   spy={true}
                   smooth={true}
                   duration={500}
+                  offset={0}
                   className={`cursor-pointer text-white hover:text-amber ${
                     isScrolled ? "text-black" : "text-white"
                   } transition-colors duration-300`}
+                  activeClass="active"
                 >
                   {link.text}
                 </Link>
