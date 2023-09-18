@@ -1,23 +1,23 @@
-// :root {
-//   // --color1: rgb(0, 231, 255);
-//   // --color2: rgb(255, 0, 231);
-//   // --back: url(https://cdn2.bulbagarden.net/upload/1/17/Cardback.jpg);
-//   --bolt1: #fac;
-//   --bolt2: #ddccaa;
-//   --boltfront: url(../Cartas/Bolty.png);
-//   --fuzzy1: #54a29e;
-//   --fuzzy2: #a79d66;
-//   --fuzzyfront: url(../Cartas/Fuzzy.png);
-//   --taily1: #efb2fb;
-//   --taily2: #acc6f8;
-//   --tailyfront: url(../Cartas/Taily.png);
-//   --blaze1: #efb2fb;
-//   --blaze2: #acc6f8;
-//   --blazefront: url(../Cartas/Blaze.png);
-//   --rockie1: #efb2fb;
-//   --rockie2: #acc6f8;
-//   --rockiefront: url(../Cartas/Rockie.png);
-// }
+:root {
+  // --color1: rgb(0, 231, 255);
+  // --color2: rgb(255, 0, 231);
+  // --back: url(https://cdn2.bulbagarden.net/upload/1/17/Cardback.jpg);
+  --bolt1: #fac;
+  --bolt2: #ddccaa;
+  --boltfront: url('https://gunnycards.s3.amazonaws.com/Blaze.png');
+  --fuzzy1: #54a29e;
+  --fuzzy2: #a79d66;
+  --fuzzyfront: url('https://gunnycards.s3.amazonaws.com/Bolty.png');
+  --taily1: #efb2fb;
+  --taily2: #acc6f8;
+  --tailyfront: url('https://gunnycards.s3.amazonaws.com/Fuzzy.png');
+  --blaze1: #efb2fb;
+  --blaze2: #acc6f8;
+  --blazefront: url('https://gunnycards.s3.amazonaws.com/Rockie.png');
+  --rockie1: #3337a1;
+  --rockie2: #8ba5d3d7;
+  --rockiefront: url('https://gunnycards.s3.amazonaws.com/Taily.png');
+}
 
 .card {
   // width: 71.5vw;
@@ -63,34 +63,34 @@
     0 55px 35px -20px rgba(0, 0, 0, 0.5);
 }
 
-// .card.bolt {
-//   --color1: var(--bolt1);
-//   --color2: var(--bolt2);
-//   --front: var(--boltfront);
-// }
-// .card.fuzzy {
-//   --color1: var(--fuzzy1);
-//   --color2: var(--fuzzy2);
-//   --front: var(--fuzzyfront);
-// }
-// .card.blaze {
-//   --color1: var(--blaze1);
-//   --color2: var(--blaze2);
-//   --front: var(--blazefront);
-// }
-// .card.rockie {
-//   --color1: var(--rockie1);
-//   --color2: var(--rockie2);
-//   --front: var(--rockiefront);
-// }
-// .card.taily {
-//   --color1: #ec9bb6;
-//   --color2: #ccac6f;
-//   --color3: #69e4a5;
-//   --color4: #0e637d;
-//   --color5: #b98cce;
-//   --front: var(--tailyfront);
-// }
+.card.bolt {
+  --color1: var(--bolt1);
+  --color2: var(--bolt2);
+  --front: var(--boltfront);
+}
+.card.fuzzy {
+  --color1: var(--fuzzy1);
+  --color2: var(--fuzzy2);
+  --front: var(--fuzzyfront);
+}
+.card.blaze {
+  --color1: var(--blaze1);
+  --color2: var(--blaze2);
+  --front: var(--blazefront);
+}
+.card.rockie {
+  --color1: var(--rockie1);
+  --color2: var(--rockie2);
+  --front: var(--rockiefront);
+}
+.card.taily {
+  --color1: #ec9bb6;
+  --color2: #ccac6f;
+  --color3: #69e4a5;
+  --color4: #0e637d;
+  --color5: #b98cce;
+  --front: var(--tailyfront);
+}
 
 .card:before,
 .card:after {
@@ -350,22 +350,6 @@
   display: inline-block;
   vertical-align: middle;
   font-size: 6vh;
-}
-
-.demo,
-.cards {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: space-evenly;
-  perspective: 2000px;
-  position: relative;
-  z-index: 1;
-  transform: translate3d(0.1px, 0.1px, 0.1px);
-}
-.demo {
-  flex-direction: row;
-  justify-content: center;
 }
 
 @media screen and (min-width: 600px) {

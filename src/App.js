@@ -1,13 +1,6 @@
 import React from 'react';
 import { ChakraProvider, theme } from '@chakra-ui/react';
 
-import {
-  Skeleton,
-  SkeletonCircle,
-  SkeletonText,
-  Container,
-} from '@chakra-ui/react';
-
 // import { ColorModeSwitcher } from './ColorModeSwitcher';
 
 import './App.css';

@@ -2,7 +2,6 @@ import React, { useState, useEffect } from 'react';
 import {
   Box,
   Flex,
-  Text,
   Button,
   IconButton,
   useDisclosure,
@@ -12,7 +11,7 @@ import {
 } from '@chakra-ui/react';
 import { HamburgerIcon, CloseIcon } from '@chakra-ui/icons';
 import gunnylogo from '../assets/gunnylogo.png';
-import { Link, scroller } from 'react-scroll';
+import { Link } from 'react-scroll';
 
 const Navbar = () => {
   const { isOpen, onToggle } = useDisclosure();
