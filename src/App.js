@@ -1,34 +1,25 @@
-import React, { useEffect, useState } from "react";
-import { scrollSpy } from "react-scroll";
-import Navbar from "./components/Navbar";
+import React from 'react';
+import { ChakraProvider, theme } from '@chakra-ui/react';
 
-import Loading from "./components/Loading";
+import {
+  Skeleton,
+  SkeletonCircle,
+  SkeletonText,
+  Container,
+} from '@chakra-ui/react';
 
-import Sections from "./pages/Sections";
-import Footer from "./components/Footer";
+// import { ColorModeSwitcher } from './ColorModeSwitcher';
 
-const App = () => {
-  const [isLoading, setIsLoading] = useState(true);
+import './App.css';
 
-  useEffect(() => {
-    // Simulate a delay for loading (you can replace this with actual loading logic)
-    setTimeout(() => {
-      setIsLoading(false);
-      scrollSpy.update();
-    }, 2000); // Change the delay time as needed
-  }, []);
+import Page from './pages/Page.js';
 
-  if (isLoading) {
-    return <Loading isLoading={isLoading} />;
-  }
-
+function App() {
   return (
-    <>
-      <Navbar />
-      <Sections />
-      <Footer />
-    </>
+    <ChakraProvider theme={theme}>
+      <Page />
+    </ChakraProvider>
   );
-};
+}
 
 export default App;

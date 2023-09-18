@@ -1,91 +1,219 @@
-/* eslint-disable jsx-a11y/anchor-is-valid */
-import React, { useState, useEffect } from "react";
-import { FaTelegram, FaTwitter } from "react-icons/fa";
-import gunnyLogo from "../assets/imgs/gunny-logo.png";
-import { Link } from "react-scroll";
-import "../assets/styles/Navbar.css";
+import React, { useState, useEffect } from 'react';
+import {
+  Box,
+  Flex,
+  Text,
+  Button,
+  IconButton,
+  useDisclosure,
+  Collapse,
+  Skeleton,
+  Image,
+} from '@chakra-ui/react';
+import { HamburgerIcon, CloseIcon } from '@chakra-ui/icons';
+import gunnylogo from '../assets/gunnylogo.png';
+import { Link, scroller } from 'react-scroll';
 
-function Navbar() {
-  const [isScrolled, setIsScrolled] = useState(false);
+const Navbar = () => {
+  const { isOpen, onToggle } = useDisclosure();
+  const [isMobile, setIsMobile] = useState(false);
+  const [isLoading, setIsLoading] = useState(true);
+  const [activeSection, setActiveSection] = useState('');
 
-  const links = [
-    { text: "HOME", to: "home" },
-    { text: "NARRATIVE", to: "narrative" },
-    { text: "INUGIS", to: "inugis" },
-    { text: "CHAMPIONS", to: "champions" },
-    { text: "ROADMAP", to: "roadmap" },
-  ];
+  const handleSetActive = to => {
+    setActiveSection(to);
+  };
 
   useEffect(() => {
-    const handleScroll = () => {
-      const scrollPosition = window.scrollY;
-      if (scrollPosition > 0) {
-        setIsScrolled(true);
-      } else {
-        setIsScrolled(false);
-      }
-    };
-
-    window.addEventListener("scroll", handleScroll);
-    return () => {
-      window.removeEventListener("scroll", handleScroll);
-    };
+    setTimeout(() => {
+      setIsLoading(false);
+    }, 2000);
   }, []);
 
+  const handleResize = () => {
+    if (window.innerWidth < 768) {
+      setIsMobile(true);
+    } else {
+      setIsMobile(false);
+    }
+  };
+
+  window.addEventListener('resize', handleResize);
+  window.addEventListener('load', handleResize);
+
   return (
-    <nav
-      className={`fixed w-full top-0 z-50 py-2 transition-all duration-300 ${
-        isScrolled
-          ? "bg-opacity-90 backdrop-filter backdrop-blur-lg "
-          : "bg-opacity-0"
-      }`}
+    <Box
+      bg="transparent"
+      p={2}
+      position="sticky"
+      top={0}
+      zIndex={1000}
+      transition="background 0.3s ease"
     >
-      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 ">
-        <div className="flex items-center justify-between">
-          <div className="flex">
-            <img src={gunnyLogo} alt="Gunny Logo" className="h-12" />
-          </div>
+      <Flex justify="space-around" align="center">
+        {isLoading ? (
+          <Skeleton height="50px" width="150px" mr={2} />
+        ) : (
+          <Image src={gunnylogo} alt="Gunny Logo" h={50} p={1} />
+        )}
 
-          <ul className="hidden sm:flex space-x-4">
-            {links.map((link, index) => (
-              <li key={index}>
-                <Link
-                  to={link.to}
-                  spy={true}
-                  smooth={true}
-                  duration={500}
-                  offset={0}
-                  className={`cursor-pointer text-white hover:text-amber ${
-                    isScrolled ? "text-black" : "text-white"
-                  } transition-colors duration-300`}
-                  activeClass="active"
-                >
-                  {link.text}
-                </Link>
-              </li>
-            ))}
-          </ul>
+        {isLoading ? (
+          <Flex>
+            <Skeleton height="10px" width="60px" mr={2} />
+            <Skeleton height="10px" width="60px" mr={2} />
+            <Skeleton height="10px" width="60px" mr={2} />
+            <Skeleton height="10px" width="60px" mr={2} />
+            <Skeleton height="10px" width="60px" mr={2} />
+          </Flex>
+        ) : isMobile ? (
+          <IconButton
+            display={{ base: 'block', md: 'none' }}
+            color="#FEB301"
+            bg="#3A2C6A"
+            style={{ border: '1px solid #FEB301' }}
+            icon={isOpen ? <CloseIcon /> : <HamburgerIcon />}
+            onClick={onToggle}
+            aria-label="Toggle navigation"
+          />
+        ) : (
+          <Flex>
+            <Link
+              to="home"
+              spy={true}
+              smooth={true}
+              duration={500}
+              offset={-50}
+              activeClass="active"
+              onSetActive={() => handleSetActive('home')}
+            >
+              <Button
+                variant="ghost"
+                color={activeSection === 'home' ? '#FEB301' : 'white'}
+                borderBottom={
+                  activeSection === 'home' ? '1px solid #FEB301' : 'white'
+                }
+                w="100%"
+              >
+                Home
+              </Button>
+            </Link>
+            <Link
+              to="narrative"
+              spy={true}
+              smooth={true}
+              duration={500}
+              offset={-50}
+              activeClass="active"
+              onSetActive={() => handleSetActive('narrative')}
+            >
+              <Button
+                variant="ghost"
+                color={activeSection === 'narrative' ? '#FEB301' : 'white'}
+                borderBottom={
+                  activeSection === 'narrative' ? '1px solid #FEB301' : 'white'
+                }
+                w="100%"
+              >
+                Narrative
+              </Button>
+            </Link>
 
-          <div className="flex ml-4">
-            <a href="#" target="_blank">
-              <FaTelegram
-                className={`text-white hover:text-amber transition-colors duration-300 text-3xl mx-2 ${
-                  isScrolled ? "text-black" : "text-white"
-                }`}
-              />
-            </a>
-            <a href="#" target="_blank">
-              <FaTwitter
-                className={`text-white hover:text-amber transition-colors duration-300 text-3xl mx-2 ${
-                  isScrolled ? "text-black" : "text-white"
-                }`}
-              />
-            </a>
-          </div>
-        </div>
-      </div>
-    </nav>
+            <Link
+              to="roadmap"
+              spy={true}
+              smooth={true}
+              duration={500}
+              offset={-50}
+              activeClass="active"
+              onSetActive={() => handleSetActive('roadmap')}
+            >
+              <Button
+                variant="ghost"
+                color={activeSection === 'roadmap' ? '#FEB301' : 'white'}
+                borderBottom={
+                  activeSection === 'roadmap' ? '1px solid #FEB301' : 'white'
+                }
+                w="100%"
+              >
+                Roadmap
+              </Button>
+            </Link>
+
+            <Link
+              to="inugis"
+              spy={true}
+              smooth={true}
+              duration={500}
+              offset={-50}
+              activeClass="active"
+              onSetActive={() => handleSetActive('inugis')}
+            >
+              <Button
+                variant="ghost"
+                color={activeSection === 'inugis' ? '#FEB301' : 'white'}
+                borderBottom={
+                  activeSection === 'inugis' ? '1px solid #FEB301' : 'white'
+                }
+                w="100%"
+              >
+                Inugis
+              </Button>
+            </Link>
+
+            {/* Repite lo mismo para los demás elementos */}
+          </Flex>
+        )}
+      </Flex>
+      <Collapse in={isOpen} animateOpacity>
+        <Box
+          mt={4}
+          p={2}
+          bg="#3A2C6A"
+          rounded="md"
+          shadow="md"
+          display={isMobile ? 'block' : 'none'}
+        >
+          <Link
+            to="home"
+            spy={true}
+            smooth={true}
+            duration={500}
+            offset={-50}
+            activeClass="active"
+          >
+            <Button variant="ghost" color="white" w="100%">
+              Home
+            </Button>
+          </Link>
+          <Link
+            to="narrative"
+            spy={true}
+            smooth={true}
+            duration={500}
+            offset={-50}
+            activeClass="active"
+          >
+            <Button variant="ghost" color="white" w="100%">
+              Narrative
+            </Button>
+          </Link>
+          <Link
+            to="narrative"
+            spy={true}
+            smooth={true}
+            duration={500}
+            offset={-50}
+            activeClass="active"
+          >
+            <Button variant="ghost" color="white" w="100%">
+              Narrative
+            </Button>
+          </Link>
+          {/* Repite lo mismo para los demás elementos */}
+        </Box>
+      </Collapse>
+    </Box>
   );
-}
+};
 
 export default Navbar;
