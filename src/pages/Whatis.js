@@ -10,6 +10,8 @@ import Inugi2 from "../assets/inugibox-2.png";
 import Inugi3 from "../assets/inugibox-3.png";
 import Inugi4 from "../assets/inugibox-4.png";
 
+import { Fade } from "react-awesome-reveal";
+
 const WhatIs = () => {
   const cardData = [
     {
@@ -52,7 +54,7 @@ const WhatIs = () => {
       const rect = card.getBoundingClientRect();
       const isVisible = rect.top <= window.innerHeight && rect.bottom >= 0;
       if (isVisible) {
-        card.classList.add("fade-in");
+        card.classList.add("fade-in"); // Esto podría no ser necesario
       }
     });
   };
@@ -84,28 +86,31 @@ const WhatIs = () => {
       </div>
 
       <div className="grid grid-cols-2 sm:grid-cols-2 md:grid-cols-4 lg:grid-cols-4 gap-4 z-10 p-2">
-        {cardData.map((card) => (
-          <div key={card.id}>
-            <div key={card.id} className="card relative">
-              <img
-                src={card.image}
-                alt={card.title}
-                className="rounded-lg w-full h-[300px] object-cover"
-              />
-              <div className="flex justify-start items-center h-full flex-col absolute bottom-0 left-0 w-full p-4">
-                <h3 className="text-yellow-500 uppercase text-lg font-bold">
-                  {card.title}
-                </h3>
-                <p className="text-white text-sm">{card.description}</p>
+        <Fade cascade damping={0.2}>
+          {cardData.map((card) => (
+            <div key={card.id}>
+              <div key={card.id} className="card relative">
+                <img
+                  src={card.image}
+                  alt={card.title}
+                  className="rounded-lg w-full h-[300px] object-cover"
+                />
+                <div className="flex justify-start items-center h-full flex-col absolute bottom-0 left-0 w-full p-4">
+                  <h3 className="text-yellow-500 uppercase text-lg font-bold">
+                    {card.title}
+                  </h3>
+                  <p className="text-white text-sm">{card.description}</p>
+                </div>
+
+                <img
+                  src={card.inugi}
+                  alt={`Inugi ${card.title}`}
+                  className="absolute bottom-[-70px] left-0 w-[90%] h-[150px]"
+                />
               </div>
-              <img
-                src={card.inugi}
-                alt={`Inugi ${card.title}`}
-                className="absolute bottom-[-70px] left-0 w-[90%] h-[150px]"
-              />
             </div>
-          </div>
-        ))}
+          ))}
+        </Fade>
       </div>
     </div>
   );
