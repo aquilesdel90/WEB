@@ -1,5 +1,5 @@
 import React, { useState, useEffect, useRef } from "react";
-import { Fade } from "react-reveal";
+
 import CharAir from "../assets/char-icon-air.png";
 import CharPeth from "../assets/char-icon-peth.png";
 import CharRatio from "../assets/char-icon-ratio.png";
@@ -104,7 +104,7 @@ const Factions = () => {
           {imageOptions.map(
             (option) =>
               selectedImage === option.id && (
-                <Fade key={option.id} left>
+                <div key={option.id}>
                   {" "}
                   {/* Use left instead of bottom */}
                   <div key={option.id} className="flex">
@@ -122,7 +122,7 @@ const Factions = () => {
                       <p className="text-white text-sm">{option.lore}</p>
                     </div>
                   </div>
-                </Fade>
+                </div>
               )
           )}
         </div>
@@ -133,7 +133,7 @@ const Factions = () => {
               className="flex justify-center items-center flex-col"
               key={option.id}
             >
-              <Fade key={option.id} left>
+              <div key={option.id}>
                 <img
                   src={option.icon}
                   alt={`${option.id}Icon`}
@@ -144,7 +144,7 @@ const Factions = () => {
                   }`}
                   onClick={() => handleImageClick(option.id)}
                 />
-              </Fade>
+              </div>
               <p className="text-white uppercase text-sm sm:text-xl">
                 {option.name}
               </p>

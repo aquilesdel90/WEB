@@ -1,5 +1,5 @@
 import React from 'react';
-import { Box, Flex, Icon, Image, Link, Stack } from '@chakra-ui/react';
+import { Box, Flex, Icon, Image, Link, Stack, Text } from '@chakra-ui/react';
 import { FaTelegram, FaTwitter } from 'react-icons/fa';
 import gunnyLogo from '../assets/gunnylogo.png';
 

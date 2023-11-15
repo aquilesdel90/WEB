@@ -1,4 +1,3 @@
-import { Fade } from "react-reveal";
 import MarcoTeam from "../assets/marco.png";
 import BackgroundHome from "../assets/background_09.png";
 const Team = () => {
@@ -56,7 +55,7 @@ const Team = () => {
 
         <div className="grid grid-cols-2 sm:grid-cols-2 md:grid-cols-4 lg:grid-cols-4 gap-4 z-10 p-2">
           {cardData.map((card) => (
-            <Fade key={card.id} bottom>
+            <div key={card.id}>
               <div key={card.id} className="card relative">
                 <img
                   src={card.image}
@@ -65,7 +64,7 @@ const Team = () => {
                 />
                 <div className="flex justify-start items-center h-full flex-col absolute bottom-0 left-0 w-full p-4"></div>
               </div>
-            </Fade>
+            </div>
           ))}
         </div>
       </div>

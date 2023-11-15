@@ -1,16 +1,8 @@
-import { Fade } from "react-reveal";
 import { useState } from "react";
 import Logo from "../assets/gunnylogo.png";
 import BackgroundHome from "../assets/background_01.jpg";
 
 export default function Home() {
-  const [isVisible, setIsVisible] = useState(false);
-
-  // This function will be triggered when the component mounts
-  const handleVisibility = () => {
-    setIsVisible(true);
-  };
-
   return (
     <div className="relative h-[100vh] flex justify-center items-center">
       <img
@@ -19,11 +11,8 @@ export default function Home() {
         className="absolute inset-0 w-full h-full "
       />
 
-      <Fade when={isVisible} duration={1000}>
-        <div
-          className="text-center text-white z-10"
-          onLoad={handleVisibility} // Trigger the visibility change when the component mounts
-        >
+      <div>
+        <div className="text-center text-white z-10">
           <img src={Logo} alt="logo" className="sm:w-72 w-48 mx-auto" />
           <p className="mt-4 text-lg md:text-md sm:text-sm leading-6 md:leading-8">
             Anim aute id magna aliqua ad ad non deserunt sunt. Qui irure qui
@@ -39,7 +28,7 @@ export default function Home() {
             </a>
           </div>
         </div>
-      </Fade>
+      </div>
     </div>
   );
 }

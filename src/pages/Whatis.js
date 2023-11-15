@@ -1,6 +1,6 @@
 import BackgroundHome from "../assets/background_02.jpg";
 import React, { useEffect } from "react";
-import { Fade } from "react-reveal";
+
 import Card1 from "../assets/card1.png";
 import Card2 from "../assets/card2.png";
 import Card3 from "../assets/card3.png";
@@ -85,7 +85,7 @@ const WhatIs = () => {
 
       <div className="grid grid-cols-2 sm:grid-cols-2 md:grid-cols-4 lg:grid-cols-4 gap-4 z-10 p-2">
         {cardData.map((card) => (
-          <Fade key={card.id} bottom>
+          <div key={card.id}>
             <div key={card.id} className="card relative">
               <img
                 src={card.image}
@@ -104,7 +104,7 @@ const WhatIs = () => {
                 className="absolute bottom-[-70px] left-0 w-[90%] h-[150px]"
               />
             </div>
-          </Fade>
+          </div>
         ))}
       </div>
     </div>
