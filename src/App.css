@@ -1,7 +1,37 @@
-.body-page {
+/* Estilos generales del contenedor */
+.roadmap-section {
+  max-height: 80vh;
+  overflow-y: auto;
+  
+}
+
+/* Estilos específicos para el track del scroll */
+.roadmap-section::-webkit-scrollbar {
+  width: 12px; /* Ancho del track del scrollbar */
+}
+
+/* Estilos para el thumb (barra deslizante) del scrollbar */
+.roadmap-section::-webkit-scrollbar-thumb {
+  background-color: #5930B7; /* Color del thumb */
+  border-radius: 6px; /* Bordes redondeados */
+}
+
+/* Estilos para el track (fondo) del scrollbar */
+.roadmap-section::-webkit-scrollbar-track {
+  background-color: #5c567b69; /* Color del track */
+}
+
+.vertical-timeline {
   margin: 0;
   padding: 0;
-  background-image: url('./assets/bg.jpg');
-  background-size: cover;
-  background-repeat: no-repeat;
+}
+
+.timeline-element-work {
+  width: 45%;
+  border: 10px solid #5930B7;
+  color: #fff;
+  background-color: #5C567B;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
 }

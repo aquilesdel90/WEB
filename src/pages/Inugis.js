@@ -1,0 +1,132 @@
+import React, { useState } from "react";
+
+import CharAir from "../assets/char-icon-air.png";
+import CharPeth from "../assets/char-icon-peth.png";
+import CharRatio from "../assets/char-icon-ratio.png";
+import CharThurizas from "../assets/char-icon-thurizas.png";
+import CharOthila from "../assets/char-icon-othila.png";
+
+import AirIcon from "../assets/icon-air.png";
+import OthilaIcon from "../assets/icon-othila.png";
+import PethIcon from "../assets/icon-peth.png";
+import RatioIcon from "../assets/icon-ratio.png";
+import ThurizasIcon from "../assets/icon-thurizas.png";
+
+import Logo from "../assets/gunnylogo.png";
+import BackgroundHome from "../assets/background_04.jpg";
+
+const imageOptions = [
+  {
+    id: "air",
+    image: CharAir,
+    icon: AirIcon,
+    name: "Air",
+    lore:
+      "Anim aute id magna aliqua ad ad non deserunt sunt. Qui irure qui lorem cupidatat commodo. Elit sunt amet fugiat veniam occaecat fugiat aliqua.",
+  },
+  {
+    id: "othila",
+    image: CharOthila,
+    icon: OthilaIcon,
+    name: "Othila",
+    lore:
+      "Anim aute id magna aliqua ad ad non deserunt sunt. Qui irure qui lorem cupidatat commodo. Elit sunt amet fugiat veniam occaecat fugiat aliqua.",
+  },
+  {
+    id: "peth",
+    image: CharPeth,
+    icon: PethIcon,
+    name: "Peth",
+    lore:
+      "Anim aute id magna aliqua ad ad non deserunt sunt. Qui irure qui lorem cupidatat commodo. Elit sunt amet fugiat veniam occaecat fugiat aliqua.",
+  },
+  {
+    id: "thurizas",
+    image: CharThurizas,
+    icon: ThurizasIcon,
+    name: "Thurizas",
+    lore:
+      "Anim aute id magna aliqua ad ad non deserunt sunt. Qui irure qui lorem cupidatat commodo. Elit sunt amet fugiat veniam occaecat fugiat aliqua.",
+  },
+  {
+    id: "ratio",
+    image: CharRatio,
+    icon: RatioIcon,
+    name: "Ratio",
+    lore:
+      "Anim aute id magna aliqua ad ad non deserunt sunt. Qui irure qui lorem cupidatat commodo. Elit sunt amet fugiat veniam occaecat fugiat aliqua.",
+  },
+];
+
+const Inugis = () => {
+  const [selectedImage, setSelectedImage] = useState("air"); // Establece "air" como la imagen por defecto
+
+  const handleImageClick = (imageId) => {
+    setSelectedImage(imageId);
+  };
+
+  return (
+    <div className="relative h-[100vh] flex justify-center items-center">
+      <img
+        src={BackgroundHome}
+        alt="bg home"
+        className="absolute inset-0 w-full h-full "
+      />
+
+      <div className="h-[80%] flex justify-between flex-col text-center text-white z-10">
+        <h1 className="text-5xl uppercase font-bold mb-4 md:mb-8 text-yellow-500">
+          Inugis
+        </h1>
+        <p className="text-lg md:text-md sm:text-sm leading-6 md:leading-8 mb-4 md:mb-8">
+          Anim aute id magna aliqua ad ad non deserunt sunt. Qui irure qui lorem
+          cupidatat commodo. Elit sunt amet fugiat veniam occaecat fugiat
+          aliqua.
+        </p>
+
+        <div className="flex items-center justify-center gap-4">
+          {imageOptions.map((option) => (
+            <div className="flex justify-center items-center flex-col">
+              <img
+                key={option.id}
+                src={option.icon}
+                alt={`${option.id}Icon`}
+                className={`w-14 sm:w-28 cursor-pointer transition-opacity duration-500 ease-in-out ${
+                  selectedImage === option.id
+                    ? "border-4 border-yellow-500 opacity-100 z-10 rounded-full"
+                    : "opacity-75"
+                }`}
+                onClick={() => handleImageClick(option.id)}
+              />
+              <p className="text-white uppercase text-sm sm:text-xl ">
+                {option.name}
+              </p>
+            </div>
+          ))}
+        </div>
+
+        <div className="flex justify-center items-center">
+          {imageOptions.map(
+            (option) =>
+              selectedImage === option.id && (
+                <div className="flex">
+                  <div className="flex flex-col justify-end w-96">
+                    <p className="text-white text-sm p-2">{option.lore}</p>
+                  </div>
+                  <div className="flex justify-start items-center">
+                    <img
+                      key={option.id}
+                      src={option.image}
+                      alt={option.id}
+                      className="sm:w-[80%] w-[100%]"
+                    />
+                  </div>
+                </div>
+              )
+          )}
+        </div>
+      </div>
+    </div>
+  );
+};
+
+export default Inugis;

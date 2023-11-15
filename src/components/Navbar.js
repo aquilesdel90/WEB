@@ -1,217 +1,109 @@
-import React, { useState, useEffect } from 'react';
-import {
-  Box,
-  Flex,
-  Button,
-  IconButton,
-  useDisclosure,
-  Collapse,
-  Skeleton,
-  Image,
-} from '@chakra-ui/react';
-import { HamburgerIcon, CloseIcon } from '@chakra-ui/icons';
-import gunnylogo from '../assets/gunnylogo.png';
-import { Link } from 'react-scroll';
+import { Bars3Icon, XMarkIcon } from "@heroicons/react/24/outline";
+import React, { useState } from "react";
+import { RiTelegramLine, RiTwitterXFill } from "react-icons/ri";
+import Logo from "../assets/gunnylogo.png";
+import { Dialog } from "@headlessui/react";
+
+const navigation = [
+  { name: "Home", href: "#" },
+  { name: "What is ?", href: "#" },
+  { name: "Factions", href: "#" },
+  { name: "Inugis", href: "#" },
+];
 
 const Navbar = () => {
-  const { isOpen, onToggle } = useDisclosure();
-  const [isMobile, setIsMobile] = useState(false);
-  const [isLoading, setIsLoading] = useState(true);
-  const [activeSection, setActiveSection] = useState('');
-
-  const handleSetActive = to => {
-    setActiveSection(to);
-  };
-
-  useEffect(() => {
-    setTimeout(() => {
-      setIsLoading(false);
-    }, 2000);
-  }, []);
-
-  const handleResize = () => {
-    if (window.innerWidth < 768) {
-      setIsMobile(true);
-    } else {
-      setIsMobile(false);
-    }
-  };
-
-  window.addEventListener('resize', handleResize);
-  window.addEventListener('load', handleResize);
-
+  const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
   return (
-    <Box
-      bg="transparent"
-      p={2}
-      position="sticky"
-      top={0}
-      zIndex={1000}
-      transition="background 0.3s ease"
+    <nav
+      className="flex items-center justify-between p-6 lg:px-8"
+      aria-label="Global"
     >
-      <Flex justify="space-around" align="center">
-        {isLoading ? (
-          <Skeleton height="50px" width="150px" mr={2} />
-        ) : (
-          <Image src={gunnylogo} alt="Gunny Logo" h={50} p={1} />
-        )}
-
-        {isLoading ? (
-          <Flex>
-            <Skeleton height="10px" width="60px" mr={2} />
-            <Skeleton height="10px" width="60px" mr={2} />
-            <Skeleton height="10px" width="60px" mr={2} />
-            <Skeleton height="10px" width="60px" mr={2} />
-            <Skeleton height="10px" width="60px" mr={2} />
-          </Flex>
-        ) : isMobile ? (
-          <IconButton
-            display={{ base: 'block', md: 'none' }}
-            color="#FEB301"
-            bg="#3A2C6A"
-            style={{ border: '1px solid #FEB301' }}
-            icon={isOpen ? <CloseIcon /> : <HamburgerIcon />}
-            onClick={onToggle}
-            aria-label="Toggle navigation"
-          />
-        ) : (
-          <Flex>
-            <Link
-              to="home"
-              spy={true}
-              smooth={true}
-              duration={500}
-              offset={-50}
-              activeClass="active"
-              onSetActive={() => handleSetActive('home')}
-            >
-              <Button
-                variant="ghost"
-                color={activeSection === 'home' ? '#FEB301' : 'white'}
-                borderBottom={
-                  activeSection === 'home' ? '1px solid #FEB301' : 'white'
-                }
-                w="100%"
-              >
-                Home
-              </Button>
-            </Link>
-            <Link
-              to="narrative"
-              spy={true}
-              smooth={true}
-              duration={500}
-              offset={-50}
-              activeClass="active"
-              onSetActive={() => handleSetActive('narrative')}
-            >
-              <Button
-                variant="ghost"
-                color={activeSection === 'narrative' ? '#FEB301' : 'white'}
-                borderBottom={
-                  activeSection === 'narrative' ? '1px solid #FEB301' : 'white'
-                }
-                w="100%"
-              >
-                Narrative
-              </Button>
-            </Link>
-
-            <Link
-              to="roadmap"
-              spy={true}
-              smooth={true}
-              duration={500}
-              offset={-50}
-              activeClass="active"
-              onSetActive={() => handleSetActive('roadmap')}
-            >
-              <Button
-                variant="ghost"
-                color={activeSection === 'roadmap' ? '#FEB301' : 'white'}
-                borderBottom={
-                  activeSection === 'roadmap' ? '1px solid #FEB301' : 'white'
-                }
-                w="100%"
-              >
-                Roadmap
-              </Button>
-            </Link>
-
-            <Link
-              to="inugis"
-              spy={true}
-              smooth={true}
-              duration={500}
-              offset={-50}
-              activeClass="active"
-              onSetActive={() => handleSetActive('inugis')}
-            >
-              <Button
-                variant="ghost"
-                color={activeSection === 'inugis' ? '#FEB301' : 'white'}
-                borderBottom={
-                  activeSection === 'inugis' ? '1px solid #FEB301' : 'white'
-                }
-                w="100%"
-              >
-                Inugis
-              </Button>
-            </Link>
-
-            {/* Repite lo mismo para los demás elementos */}
-          </Flex>
-        )}
-      </Flex>
-      <Collapse in={isOpen} animateOpacity>
-        <Box
-          mt={4}
-          p={2}
-          bg="#3A2C6A"
-          rounded="md"
-          shadow="md"
-          display={isMobile ? 'block' : 'none'}
+      <div className="flex lg:flex-1"></div>
+      <div className="flex lg:hidden">
+        <button
+          type="button"
+          className="-m-2.5 inline-flex items-center justify-center rounded-md p-2.5 text-white"
+          onClick={() => setMobileMenuOpen(true)}
         >
-          <Link
-            to="home"
-            spy={true}
-            smooth={true}
-            duration={500}
-            offset={-50}
-            activeClass="active"
+          <span className="sr-only">Open main menu</span>
+          <Bars3Icon className="h-6 w-6" aria-hidden="true" />
+        </button>
+      </div>
+      <div className="hidden lg:flex lg:gap-x-12">
+        {navigation.map((item) => (
+          <a
+            key={item.name}
+            href={item.href}
+            className="text-sm font-semibold leading-6 text-white"
           >
-            <Button variant="ghost" color="white" w="100%">
-              Home
-            </Button>
-          </Link>
-          <Link
-            to="narrative"
-            spy={true}
-            smooth={true}
-            duration={500}
-            offset={-50}
-            activeClass="active"
-          >
-            <Button variant="ghost" color="white" w="100%">
-              Narrative
-            </Button>
-          </Link>
-          <Link
-            to="narrative"
-            spy={true}
-            smooth={true}
-            duration={500}
-            offset={-50}
-            activeClass="active"
-          >
-            <Button variant="ghost" color="white" w="100%">
-              Narrative
-            </Button>
-          </Link>
-          {/* Repite lo mismo para los demás elementos */}
-        </Box>
-      </Collapse>
-    </Box>
+            {item.name}
+          </a>
+        ))}
+      </div>
+      <div className="hidden lg:flex lg:flex-1 lg:justify-center">
+        <a href="#" className="text-sm font-semibold leading-6 text-gray-900">
+          <span className="text-xl text-white">
+            <RiTwitterXFill />
+          </span>
+        </a>
+        <a href="#" className="text-sm font-semibold leading-6 text-gray-900">
+          <span className="text-xl text-white">
+            <RiTelegramLine />
+          </span>
+        </a>
+      </div>
+      <Dialog
+        as="div"
+        className="lg:hidden"
+        open={mobileMenuOpen}
+        onClose={setMobileMenuOpen}
+      >
+        <div className="fixed inset-0 z-50" />
+        <Dialog.Panel className="fixed inset-y-0 right-0 z-50 w-full overflow-y-auto bg-white px-6 py-6 sm:max-w-sm sm:ring-1 sm:ring-gray-900/10">
+          <div className="flex items-center justify-between">
+            <a href="#" className="-m-1.5 p-1.5">
+              <span className="sr-only">Your Company</span>
+              <img
+                className="h-8 w-auto"
+                src="https://tailwindui.com/img/logos/mark.svg?color=indigo&shade=600"
+                alt=""
+              />
+            </a>
+            <button
+              type="button"
+              className="-m-2.5 rounded-md p-2.5 text-gray-700"
+              onClick={() => setMobileMenuOpen(false)}
+            >
+              <span className="sr-only">Close menu</span>
+              <XMarkIcon className="h-6 w-6" aria-hidden="true" />
+            </button>
+          </div>
+          <div className="mt-6 flow-root">
+            <div className="-my-6 divide-y divide-gray-500/10">
+              <div className="space-y-2 py-6">
+                {navigation.map((item) => (
+                  <a
+                    key={item.name}
+                    href={item.href}
+                    className="-mx-3 block rounded-lg px-3 py-2 text-base font-semibold leading-7 text-gray-900 hover:bg-gray-50"
+                  >
+                    {item.name}
+                  </a>
+                ))}
+              </div>
+              <div className="py-6">
+                <a
+                  href="#"
+                  className="-mx-3 block rounded-lg px-3 py-2.5 text-base font-semibold leading-7 text-gray-900 hover:bg-gray-50"
+                >
+                  Log in
+                </a>
+              </div>
+            </div>
+          </div>
+        </Dialog.Panel>
+      </Dialog>
+    </nav>
   );
 };
 
