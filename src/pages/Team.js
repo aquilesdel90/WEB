@@ -1,5 +1,7 @@
 import MarcoTeam from "../assets/marco.png";
 import BackgroundHome from "../assets/background_09.png";
+import { Fade } from "react-awesome-reveal";
+
 const Team = () => {
   const cardData = [
     {
@@ -56,14 +58,16 @@ const Team = () => {
         <div className="grid grid-cols-2 sm:grid-cols-2 md:grid-cols-4 lg:grid-cols-4 gap-4 z-10 p-2">
           {cardData.map((card) => (
             <div key={card.id}>
-              <div key={card.id} className="card relative">
-                <img
-                  src={card.image}
-                  alt={card.title}
-                  className="rounded-lg w-full h-[300px] object-cover"
-                />
-                <div className="flex justify-start items-center h-full flex-col absolute bottom-0 left-0 w-full p-4"></div>
-              </div>
+              <Fade direction="up" triggerOnce>
+                <div key={card.id} className="card relative">
+                  <img
+                    src={card.image}
+                    alt={card.title}
+                    className="rounded-lg w-full h-[300px] object-cover"
+                  />
+                  <div className="flex justify-start items-center h-full flex-col absolute bottom-0 left-0 w-full p-4"></div>
+                </div>
+              </Fade>
             </div>
           ))}
         </div>
