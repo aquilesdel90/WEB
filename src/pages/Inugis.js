@@ -1,57 +1,44 @@
 import React, { useState } from "react";
 
-import Fuzzy from "../assets/fuzzy.png";
-import Rookie from "../assets/rookie.png";
-import Blaze from "../assets/blaze.png";
-import Volty from "../assets/volty.png";
-import Taily from "../assets/taily.png";
-
-import AirIcon from "../assets/icon-air.png";
-import OthilaIcon from "../assets/icon-othila.png";
-import PethIcon from "../assets/icon-peth.png";
-import RatioIcon from "../assets/icon-ratio.png";
-import ThurizasIcon from "../assets/icon-thurizas.png";
 import { Fade } from "react-awesome-reveal";
-
-import BackgroundHome from "../assets/background_04.jpg";
 
 const imageOptions = [
   {
     id: "fuzzy",
-    image: Fuzzy,
-    icon: AirIcon,
+    image: "https://gunnyvideos.s3.amazonaws.com/fuzzy.png",
+    icon: "https://gunnyvideos.s3.amazonaws.com/icon-air.png",
     name: "Fuzzy",
     lore:
       "Anim aute id magna aliqua ad ad non deserunt sunt. Qui irure qui lorem cupidatat commodo. Elit sunt amet fugiat veniam occaecat fugiat aliqua.",
   },
   {
     id: "rookie",
-    image: Rookie,
-    icon: OthilaIcon,
+    image: "https://gunnyvideos.s3.amazonaws.com/rookie.png",
+    icon: "https://gunnyvideos.s3.amazonaws.com/icon-othila.png",
     name: "Rookie",
     lore:
       "Anim aute id magna aliqua ad ad non deserunt sunt. Qui irure qui lorem cupidatat commodo. Elit sunt amet fugiat veniam occaecat fugiat aliqua.",
   },
   {
     id: "taily",
-    image: Taily,
-    icon: PethIcon,
+    image: "https://gunnyvideos.s3.amazonaws.com/taily.png",
+    icon: "https://gunnyvideos.s3.amazonaws.com/icon-peth.png",
     name: "Taily",
     lore:
       "Anim aute id magna aliqua ad ad non deserunt sunt. Qui irure qui lorem cupidatat commodo. Elit sunt amet fugiat veniam occaecat fugiat aliqua.",
   },
   {
     id: "volty",
-    image: Volty,
-    icon: ThurizasIcon,
+    image: "https://gunnyvideos.s3.amazonaws.com/volty.png",
+    icon: "https://gunnyvideos.s3.amazonaws.com/icon-thurizas.png",
     name: "Volty",
     lore:
       "Anim aute id magna aliqua ad ad non deserunt sunt. Qui irure qui lorem cupidatat commodo. Elit sunt amet fugiat veniam occaecat fugiat aliqua.",
   },
   {
     id: "blaze",
-    image: Blaze,
-    icon: RatioIcon,
+    image: "https://gunnyvideos.s3.amazonaws.com/blaze.png",
+    icon: "https://gunnyvideos.s3.amazonaws.com/icon-ratio.png",
     name: "Blaze",
     lore:
       "Anim aute id magna aliqua ad ad non deserunt sunt. Qui irure qui lorem cupidatat commodo. Elit sunt amet fugiat veniam occaecat fugiat aliqua.",
@@ -68,7 +55,7 @@ const Inugis = () => {
   return (
     <div className="relative h-[100vh] flex justify-center items-center">
       <img
-        src={BackgroundHome}
+        src="https://gunnyvideos.s3.amazonaws.com/background_04.jpg"
         alt="bg home"
         className="absolute inset-0 w-full h-full "
       />

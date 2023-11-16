@@ -1,4 +1,3 @@
-import BackgroundHome from "../assets/background_08.png";
 import {
   VerticalTimeline,
   VerticalTimelineElement,
@@ -12,7 +11,7 @@ const Roadmap = () => {
   return (
     <div className="relative h-[100vh] flex justify-center items-center">
       <img
-        src={BackgroundHome}
+        src="https://gunnyvideos.s3.amazonaws.com/background_08.png"
         alt="bg home"
         className="absolute inset-0 w-full h-full "
       />

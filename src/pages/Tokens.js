@@ -1,11 +1,10 @@
 import Carts from "../assets/carts.png";
 
-import BackgroundHome from "../assets/background_07.png";
 const Tokens = () => {
   return (
     <div className="relative h-[100vh] flex justify-center items-center">
       <img
-        src={BackgroundHome}
+        src="https://gunnyvideos.s3.amazonaws.com/background_07.png"
         alt="bg home"
         className="absolute inset-0 w-full h-full "
       />
@@ -24,7 +23,11 @@ const Tokens = () => {
           </div>
         </div>
         <div className="w-full sm:w-[90vh] pr-4 sm:pr-20 flex justify-center items-start flex-col max-w-6xl mx-auto space-y-4">
-          <img src={Carts} className="w-full sm:w-[90vh]" alt="img skin" />
+          <img
+            src="https://gunnyvideos.s3.amazonaws.com/carts.png"
+            className="w-full sm:w-[90vh]"
+            alt="img skin"
+          />
         </div>
       </div>
     </div>

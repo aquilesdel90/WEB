@@ -1,12 +1,10 @@
-import MarcoTeam from "../assets/marco.png";
-import BackgroundHome from "../assets/background_09.png";
 import { Fade } from "react-awesome-reveal";
 
 const Team = () => {
   const cardData = [
     {
       id: 1,
-      image: MarcoTeam,
+      image: "https://gunnyvideos.s3.amazonaws.com/marco.png",
       title: "Card 1",
 
       description:
@@ -14,7 +12,7 @@ const Team = () => {
     },
     {
       id: 2,
-      image: MarcoTeam,
+      image: "https://gunnyvideos.s3.amazonaws.com/marco.png",
       title: "Card 2",
 
       description:
@@ -22,7 +20,7 @@ const Team = () => {
     },
     {
       id: 3,
-      image: MarcoTeam,
+      image: "https://gunnyvideos.s3.amazonaws.com/marco.png",
       title: "Card 3",
 
       description:
@@ -30,7 +28,7 @@ const Team = () => {
     },
     {
       id: 4,
-      image: MarcoTeam,
+      image: "https://gunnyvideos.s3.amazonaws.com/marco.png",
       title: "Card 4",
 
       description:
@@ -40,7 +38,7 @@ const Team = () => {
   return (
     <div className="relative h-[100vh] flex justify-center items-center">
       <img
-        src={BackgroundHome}
+        src="https://gunnyvideos.s3.amazonaws.com/background_09.png"
         alt="bg home"
         className="absolute inset-0 w-full h-full "
       />

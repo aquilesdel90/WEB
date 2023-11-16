@@ -1,14 +1,4 @@
-import BackgroundHome from "../assets/background_02.jpg";
 import React, { useEffect } from "react";
-
-import Card1 from "../assets/card1.png";
-import Card2 from "../assets/card2.png";
-import Card3 from "../assets/card3.png";
-import Card4 from "../assets/card4.png";
-import Inugi1 from "../assets/inugibox-1.png";
-import Inugi2 from "../assets/inugibox-2.png";
-import Inugi3 from "../assets/inugibox-3.png";
-import Inugi4 from "../assets/inugibox-4.png";
 
 import { Fade } from "react-awesome-reveal";
 
@@ -16,33 +6,33 @@ const WhatIs = () => {
   const cardData = [
     {
       id: 1,
-      image: Card1,
+      image: "https://gunnyvideos.s3.amazonaws.com/card1.png",
       title: "Card 1",
-      inugi: Inugi1,
+      inugi: "https://gunnyvideos.s3.amazonaws.com/inugibox-1.png",
       description:
         "Anim aute id magna aliqua ad ad non deserunt sunt. Qui irure qui lorem cupidatat commodo. Elit sunt amet fugiat veniam occaecat fugiat aliqua.",
     },
     {
       id: 2,
-      image: Card2,
+      image: "https://gunnyvideos.s3.amazonaws.com/card2.png",
       title: "Card 2",
-      inugi: Inugi2,
+      inugi: "https://gunnyvideos.s3.amazonaws.com/inugibox-2.png",
       description:
         "Anim aute id magna aliqua ad ad non deserunt sunt. Qui irure qui lorem cupidatat commodo. Elit sunt amet fugiat veniam occaecat fugiat aliqua.",
     },
     {
       id: 3,
-      image: Card3,
+      image: "https://gunnyvideos.s3.amazonaws.com/card3.png",
       title: "Card 3",
-      inugi: Inugi3,
+      inugi: "https://gunnyvideos.s3.amazonaws.com/inugibox-3.png",
       description:
         "Anim aute id magna aliqua ad ad non deserunt sunt. Qui irure qui lorem cupidatat commodo. Elit sunt amet fugiat veniam occaecat fugiat aliqua.",
     },
     {
       id: 4,
-      image: Card4,
+      image: "https://gunnyvideos.s3.amazonaws.com/card4.png",
       title: "Card 4",
-      inugi: Inugi4,
+      inugi: "https://gunnyvideos.s3.amazonaws.com/inugibox-4.png",
       description:
         "Anim aute id magna aliqua ad ad non deserunt sunt. Qui irure qui lorem cupidatat commodo. Elit sunt amet fugiat veniam occaecat fugiat aliqua.",
     },
@@ -69,7 +59,7 @@ const WhatIs = () => {
   return (
     <div className="relative h-[100vh] flex justify-center items-center flex-col">
       <img
-        src={BackgroundHome}
+        src="https://gunnyvideos.s3.amazonaws.com/background_02.jpg"
         alt="bg home"
         className="absolute inset-0 w-full h-full"
       />

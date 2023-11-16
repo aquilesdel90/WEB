@@ -1,13 +1,12 @@
 import React from "react";
 
-import BackgroundHome from "../assets/background_05.jpg";
 import Skin from "../assets/skin.png";
 
 const Skins = () => {
   return (
     <div className="relative h-[100vh] flex justify-center items-center">
       <img
-        src={BackgroundHome}
+        src="https://gunnyvideos.s3.amazonaws.com/background_05.jpg"
         alt="bg home"
         className="absolute inset-0 w-full h-full "
       />

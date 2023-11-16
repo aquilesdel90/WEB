@@ -1,6 +1,5 @@
 import React from "react";
 
-import BackgroundHome from "../assets/background_06.png";
 import GameMode1 from "../assets/gamemode1.png";
 import GameMode2 from "../assets/gamemode2.png";
 
@@ -8,7 +7,7 @@ const GameModes = () => {
   return (
     <div className="relative h-[100vh] flex justify-center items-center">
       <img
-        src={BackgroundHome}
+        src="https://gunnyvideos.s3.amazonaws.com/background_06.png"
         alt="bg home"
         className="absolute inset-0 w-full h-full "
       />

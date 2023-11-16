@@ -1,18 +1,20 @@
 import { useState } from "react";
-import Logo from "../assets/gunnylogo.png";
-import BackgroundHome from "../assets/background_01.jpg";
 
 export default function Home() {
   return (
     <div className="relative h-[100vh] flex justify-center items-center">
       <img
-        src={BackgroundHome}
+        src="https://gunnyvideos.s3.amazonaws.com/background_01.jpg"
         alt="bg home"
         className="absolute inset-0 w-full h-full "
       />
 
       <div className="text-center text-white z-10">
-        <img src={Logo} alt="logo" className="sm:w-72 w-48 mx-auto" />
+        <img
+          src="https://gunnyvideos.s3.amazonaws.com/logo.png"
+          alt="logo"
+          className="sm:w-72 w-48 mx-auto"
+        />
         <p className="mt-4 text-lg md:text-md sm:text-sm leading-6 md:leading-8">
           Anim aute id magna aliqua ad ad non deserunt sunt. Qui irure qui lorem
           cupidatat commodo. Elit sunt amet fugiat veniam occaecat fugiat

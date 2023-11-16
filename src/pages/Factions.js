@@ -13,12 +13,10 @@ import PethIcon from "../assets/peth.png";
 import RatioIcon from "../assets/ratio.png";
 import ThurizasIcon from "../assets/thurizas.png";
 
-import BackgroundHome from "../assets/background_03.jpg";
-
 const imageOptions = [
   {
     id: "air",
-    image: CharAir,
+    image: "https://gunnyvideos.s3.amazonaws.com/char-icon-air.png",
     icon: AirIcon,
     name: "Air",
     lore:
@@ -26,7 +24,7 @@ const imageOptions = [
   },
   {
     id: "othila",
-    image: CharOthila,
+    image: "https://gunnyvideos.s3.amazonaws.com/char-icon-othila.png",
     icon: OthilaIcon,
     name: "Othila",
     lore:
@@ -34,7 +32,7 @@ const imageOptions = [
   },
   {
     id: "peth",
-    image: CharPeth,
+    image: "https://gunnyvideos.s3.amazonaws.com/char-icon-peth.png",
     icon: PethIcon,
     name: "Peth",
     lore:
@@ -42,7 +40,7 @@ const imageOptions = [
   },
   {
     id: "thurizas",
-    image: CharThurizas,
+    image: "https://gunnyvideos.s3.amazonaws.com/char-icon-thurizas.png",
     icon: ThurizasIcon,
     name: "Thurizas",
     lore:
@@ -50,7 +48,7 @@ const imageOptions = [
   },
   {
     id: "ratio",
-    image: CharRatio,
+    image: "https://gunnyvideos.s3.amazonaws.com/char-icon-ratio.png",
     icon: RatioIcon,
     name: "Ratio",
     lore:
@@ -95,7 +93,7 @@ const Factions = () => {
   return (
     <div className="relative h-[100vh] flex justify-center items-center">
       <img
-        src={BackgroundHome}
+        src="https://gunnyvideos.s3.amazonaws.com/background_03.jpg"
         alt="bg home"
         className="absolute inset-0 w-full h-full "
       />
