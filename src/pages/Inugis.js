@@ -1,68 +1,93 @@
-import React, { useState } from "react";
-
-import Fuzzy from "../assets/fuzzy.png";
-import Rookie from "../assets/rookie.png";
-import Blaze from "../assets/blaze.png";
-import Volty from "../assets/volty.png";
-import Taily from "../assets/taily.png";
-
-import AirIcon from "../assets/icon-air.png";
-import OthilaIcon from "../assets/icon-othila.png";
-import PethIcon from "../assets/icon-peth.png";
-import RatioIcon from "../assets/icon-ratio.png";
-import ThurizasIcon from "../assets/icon-thurizas.png";
+import React, { useState, useEffect, useRef } from "react";
 import { Fade } from "react-awesome-reveal";
 
-import BackgroundHome from "../assets/background_04.jpg";
+import CharAir from "../assets/char-icon-air.png";
+import CharPeth from "../assets/char-icon-peth.png";
+import CharRatio from "../assets/char-icon-ratio.png";
+import CharThurizas from "../assets/char-icon-thurizas.png";
+import CharOthila from "../assets/char-icon-othila.png";
+
+import AirIcon from "../assets/air.png";
+import OthilaIcon from "../assets/othila.png";
+import PethIcon from "../assets/peth.png";
+import RatioIcon from "../assets/ratio.png";
+import ThurizasIcon from "../assets/thurizas.png";
+
+import BackgroundHome from "../assets/background_03.jpg";
 
 const imageOptions = [
   {
-    id: "fuzzy",
-    image: Fuzzy,
+    id: "air",
+    image: CharAir,
     icon: AirIcon,
-    name: "Fuzzy",
+    name: "Air",
     lore:
       "Anim aute id magna aliqua ad ad non deserunt sunt. Qui irure qui lorem cupidatat commodo. Elit sunt amet fugiat veniam occaecat fugiat aliqua.",
   },
   {
-    id: "rookie",
-    image: Rookie,
+    id: "othila",
+    image: CharOthila,
     icon: OthilaIcon,
-    name: "Rookie",
+    name: "Othila",
     lore:
       "Anim aute id magna aliqua ad ad non deserunt sunt. Qui irure qui lorem cupidatat commodo. Elit sunt amet fugiat veniam occaecat fugiat aliqua.",
   },
   {
-    id: "taily",
-    image: Taily,
+    id: "peth",
+    image: CharPeth,
     icon: PethIcon,
-    name: "Taily",
+    name: "Peth",
     lore:
       "Anim aute id magna aliqua ad ad non deserunt sunt. Qui irure qui lorem cupidatat commodo. Elit sunt amet fugiat veniam occaecat fugiat aliqua.",
   },
   {
-    id: "volty",
-    image: Volty,
+    id: "thurizas",
+    image: CharThurizas,
     icon: ThurizasIcon,
-    name: "Volty",
+    name: "Thurizas",
     lore:
       "Anim aute id magna aliqua ad ad non deserunt sunt. Qui irure qui lorem cupidatat commodo. Elit sunt amet fugiat veniam occaecat fugiat aliqua.",
   },
   {
-    id: "blaze",
-    image: Blaze,
+    id: "ratio",
+    image: CharRatio,
     icon: RatioIcon,
-    name: "Blaze",
+    name: "Ratio",
     lore:
       "Anim aute id magna aliqua ad ad non deserunt sunt. Qui irure qui lorem cupidatat commodo. Elit sunt amet fugiat veniam occaecat fugiat aliqua.",
   },
 ];
 
 const Inugis = () => {
-  const [selectedImage, setSelectedImage] = useState("fuzzy"); // Establece "fuzzy" como la imagen por defecto
+  const [selectedImage, setSelectedImage] = useState("air");
+  const [imageLoaded, setImageLoaded] = useState(false);
+  const imgRef = useRef(null);
+  const loadedImages = useRef({});
+
+  useEffect(() => {
+    setImageLoaded(false);
+
+    const imageUrl = getImageUrl(selectedImage);
+
+    if (loadedImages.current[imageUrl]) {
+      setImageLoaded(true);
+    } else {
+      const image = new Image();
+      image.src = imageUrl;
+      image.onload = () => {
+        setImageLoaded(true);
+        loadedImages.current[imageUrl] = true;
+      };
+    }
+  }, [selectedImage]);
 
   const handleImageClick = (imageId) => {
     setSelectedImage(imageId);
+  };
+
+  const getImageUrl = (imageId) => {
+    const selectedOption = imageOptions.find((option) => option.id === imageId);
+    return selectedOption ? selectedOption.image : "";
   };
 
   return (
@@ -85,9 +110,11 @@ const Inugis = () => {
 
         <div className="flex items-center justify-center gap-4">
           {imageOptions.map((option) => (
-            <div className="flex justify-center items-center flex-col">
+            <div
+              className="flex justify-center items-center flex-col"
+              key={option.id}
+            >
               <img
-                key={option.id}
                 src={option.icon}
                 alt={`${option.id}Icon`}
                 className={`w-14 sm:w-28 cursor-pointer transition-opacity duration-500 ease-in-out ${

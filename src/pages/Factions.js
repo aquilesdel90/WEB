@@ -1,4 +1,5 @@
 import React, { useState, useEffect, useRef } from "react";
+import { Fade } from "react-awesome-reveal";
 
 import CharAir from "../assets/char-icon-air.png";
 import CharPeth from "../assets/char-icon-peth.png";
@@ -13,7 +14,6 @@ import RatioIcon from "../assets/ratio.png";
 import ThurizasIcon from "../assets/thurizas.png";
 
 import BackgroundHome from "../assets/background_03.jpg";
-import { Fade } from "react-awesome-reveal";
 
 const imageOptions = [
   {
@@ -62,15 +62,25 @@ const Factions = () => {
   const [selectedImage, setSelectedImage] = useState("air");
   const [imageLoaded, setImageLoaded] = useState(false);
   const imgRef = useRef(null);
+  const loadedImages = useRef({}); // Almacena las imágenes ya cargadas
 
   useEffect(() => {
-    setImageLoaded(false); // Reset the loading state when changing the image
+    setImageLoaded(false); // Resetear el estado de carga al cambiar la imagen
 
-    const image = new Image();
-    image.src = getImageUrl(selectedImage);
-    image.onload = () => {
+    const imageUrl = getImageUrl(selectedImage);
+
+    // Verificar si la imagen ya está cargada
+    if (loadedImages.current[imageUrl]) {
       setImageLoaded(true);
-    };
+    } else {
+      const image = new Image();
+      image.src = imageUrl;
+      image.onload = () => {
+        setImageLoaded(true);
+        // Almacenar la imagen cargada para evitar descargas adicionales
+        loadedImages.current[imageUrl] = true;
+      };
+    }
   }, [selectedImage]);
 
   const handleImageClick = (imageId) => {
@@ -105,8 +115,6 @@ const Factions = () => {
             (option) =>
               selectedImage === option.id && (
                 <div key={option.id}>
-                  {" "}
-                  {/* Use left instead of bottom */}
                   <Fade key={option.id} trigger={true}>
                     <div key={option.id} className="flex">
                       <div className="flex justify-end items-center">
