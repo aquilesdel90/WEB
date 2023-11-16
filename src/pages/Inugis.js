@@ -1,65 +1,65 @@
 import React, { useState } from "react";
 
-import CharAir from "../assets/char-icon-air.png";
-import CharPeth from "../assets/char-icon-peth.png";
-import CharRatio from "../assets/char-icon-ratio.png";
-import CharThurizas from "../assets/char-icon-thurizas.png";
-import CharOthila from "../assets/char-icon-othila.png";
+import Fuzzy from "../assets/fuzzy.png";
+import Rookie from "../assets/rookie.png";
+import Blaze from "../assets/blaze.png";
+import Volty from "../assets/volty.png";
+import Taily from "../assets/taily.png";
 
 import AirIcon from "../assets/icon-air.png";
 import OthilaIcon from "../assets/icon-othila.png";
 import PethIcon from "../assets/icon-peth.png";
 import RatioIcon from "../assets/icon-ratio.png";
 import ThurizasIcon from "../assets/icon-thurizas.png";
+import { Fade } from "react-awesome-reveal";
 
-import Logo from "../assets/gunnylogo.png";
 import BackgroundHome from "../assets/background_04.jpg";
 
 const imageOptions = [
   {
-    id: "air",
-    image: CharAir,
+    id: "fuzzy",
+    image: Fuzzy,
     icon: AirIcon,
-    name: "Air",
+    name: "Fuzzy",
     lore:
       "Anim aute id magna aliqua ad ad non deserunt sunt. Qui irure qui lorem cupidatat commodo. Elit sunt amet fugiat veniam occaecat fugiat aliqua.",
   },
   {
-    id: "othila",
-    image: CharOthila,
+    id: "rookie",
+    image: Rookie,
     icon: OthilaIcon,
-    name: "Othila",
+    name: "Rookie",
     lore:
       "Anim aute id magna aliqua ad ad non deserunt sunt. Qui irure qui lorem cupidatat commodo. Elit sunt amet fugiat veniam occaecat fugiat aliqua.",
   },
   {
-    id: "peth",
-    image: CharPeth,
+    id: "taily",
+    image: Taily,
     icon: PethIcon,
-    name: "Peth",
+    name: "Taily",
     lore:
       "Anim aute id magna aliqua ad ad non deserunt sunt. Qui irure qui lorem cupidatat commodo. Elit sunt amet fugiat veniam occaecat fugiat aliqua.",
   },
   {
-    id: "thurizas",
-    image: CharThurizas,
+    id: "volty",
+    image: Volty,
     icon: ThurizasIcon,
-    name: "Thurizas",
+    name: "Volty",
     lore:
       "Anim aute id magna aliqua ad ad non deserunt sunt. Qui irure qui lorem cupidatat commodo. Elit sunt amet fugiat veniam occaecat fugiat aliqua.",
   },
   {
-    id: "ratio",
-    image: CharRatio,
+    id: "blaze",
+    image: Blaze,
     icon: RatioIcon,
-    name: "Ratio",
+    name: "Blaze",
     lore:
       "Anim aute id magna aliqua ad ad non deserunt sunt. Qui irure qui lorem cupidatat commodo. Elit sunt amet fugiat veniam occaecat fugiat aliqua.",
   },
 ];
 
 const Inugis = () => {
-  const [selectedImage, setSelectedImage] = useState("air"); // Establece "air" como la imagen por defecto
+  const [selectedImage, setSelectedImage] = useState("fuzzy"); // Establece "fuzzy" como la imagen por defecto
 
   const handleImageClick = (imageId) => {
     setSelectedImage(imageId);
@@ -108,19 +108,21 @@ const Inugis = () => {
           {imageOptions.map(
             (option) =>
               selectedImage === option.id && (
-                <div className="flex">
-                  <div className="flex flex-col justify-end w-96">
-                    <p className="text-white text-sm p-2">{option.lore}</p>
+                <Fade key={option.id} trigger={true}>
+                  <div className="flex">
+                    <div className="flex flex-col justify-end w-96">
+                      <p className="text-white text-sm p-2">{option.lore}</p>
+                    </div>
+                    <div className="flex justify-start items-center">
+                      <img
+                        key={option.id}
+                        src={option.image}
+                        alt={option.id}
+                        className="sm:w-[50%] w-[100%]"
+                      />
+                    </div>
                   </div>
-                  <div className="flex justify-start items-center">
-                    <img
-                      key={option.id}
-                      src={option.image}
-                      alt={option.id}
-                      className="sm:w-[80%] w-[100%]"
-                    />
-                  </div>
-                </div>
+                </Fade>
               )
           )}
         </div>

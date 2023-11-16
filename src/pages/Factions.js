@@ -12,8 +12,8 @@ import PethIcon from "../assets/peth.png";
 import RatioIcon from "../assets/ratio.png";
 import ThurizasIcon from "../assets/thurizas.png";
 
-import Logo from "../assets/gunnylogo.png";
 import BackgroundHome from "../assets/background_03.jpg";
+import { Fade } from "react-awesome-reveal";
 
 const imageOptions = [
   {
@@ -107,21 +107,23 @@ const Factions = () => {
                 <div key={option.id}>
                   {" "}
                   {/* Use left instead of bottom */}
-                  <div key={option.id} className="flex">
-                    <div className="flex justify-end items-center">
-                      <img
-                        ref={imgRef}
-                        src={getImageUrl(selectedImage)}
-                        alt={selectedImage}
-                        className={`sm:w-[80%] w-[100%] ${
-                          imageLoaded ? "" : "hidden"
-                        } transition-opacity duration-500 ease-in-out`}
-                      />
+                  <Fade key={option.id} trigger={true}>
+                    <div key={option.id} className="flex">
+                      <div className="flex justify-end items-center">
+                        <img
+                          ref={imgRef}
+                          src={getImageUrl(selectedImage)}
+                          alt={selectedImage}
+                          className={`sm:w-[80%] w-[100%] ${
+                            imageLoaded ? "" : "hidden"
+                          } transition-opacity duration-500 ease-in-out`}
+                        />
+                      </div>
+                      <div className="flex justify-end w-96 p-2">
+                        <p className="text-white text-sm">{option.lore}</p>
+                      </div>
                     </div>
-                    <div className="flex justify-end w-96 p-2">
-                      <p className="text-white text-sm">{option.lore}</p>
-                    </div>
-                  </div>
+                  </Fade>
                 </div>
               )
           )}
