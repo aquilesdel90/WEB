@@ -1,6 +1,6 @@
-import React from "react";
+import React from 'react';
 
-import Skin from "../assets/skin.png";
+import Skin from '../assets/skin.png';
 
 const Skins = () => {
   return (
@@ -14,7 +14,7 @@ const Skins = () => {
       <div className="flex-1 flex justify-end items-center max-w-6xl mx-auto space-y-4 z-10">
         <div className="flex flex-col items-end">
           <h2 className="text-indigo-600 text-3xl font-bold uppercase">
-            Skins
+            ·Skins·
           </h2>
           <div className="flex items-end w-[70%]">
             <p className="container text-black text-xl text-end">

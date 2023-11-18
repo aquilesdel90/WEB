@@ -1,8 +1,8 @@
-import { useState } from "react";
+import { useState } from 'react';
 
 export default function Home() {
   return (
-    <div className="relative h-[100vh] flex justify-center items-center">
+    <div className="relative w-[100%] h-[100%] sm:h-[100vh] flex justify-center items-center">
       <img
         src="https://gunnyvideos.s3.amazonaws.com/background_01.jpg"
         alt="bg home"
@@ -15,7 +15,7 @@ export default function Home() {
           alt="logo"
           className="sm:w-72 w-48 mx-auto"
         />
-        <p className="mt-4 text-lg md:text-md sm:text-sm leading-6 md:leading-8">
+        <p className="mt-4 text-sm md:text-lg sm:text-xl leading-6 md:leading-8">
           Anim aute id magna aliqua ad ad non deserunt sunt. Qui irure qui lorem
           cupidatat commodo. Elit sunt amet fugiat veniam occaecat fugiat
           aliqua.

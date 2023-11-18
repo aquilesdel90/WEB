@@ -1,7 +1,7 @@
-import React from "react";
+import React from 'react';
 
-import GameMode1 from "../assets/gamemode1.png";
-import GameMode2 from "../assets/gamemode2.png";
+import GameMode1 from '../assets/gamemode1.png';
+import GameMode2 from '../assets/gamemode2.png';
 
 const GameModes = () => {
   return (
@@ -14,7 +14,7 @@ const GameModes = () => {
 
       <div className="h-[80%] flex justify-between flex-col text-center text-white z-10">
         <h2 className="text-yellow-500 text-5xl uppercase font-bold text-center">
-          Game Modes
+          ·Game Modes·
         </h2>
         <div className="p-4">
           <p className="text-white text-lg md:text-2xl text-center">
@@ -30,7 +30,7 @@ const GameModes = () => {
               className="rounded-lg sm:h-[300px] md:h-[390px] w-full sm:w-[250px] md:w-[300px] p-3"
               style={{
                 backgroundImage: `url(${GameMode1})`,
-                backgroundSize: "cover",
+                backgroundSize: 'cover',
               }}
             >
               <div className="p-4">
@@ -46,7 +46,7 @@ const GameModes = () => {
               className="rounded-lg sm:h-[300px] md:h-[390px] w-full sm:w-[250px] md:w-[300px] p-3"
               style={{
                 backgroundImage: `url(${GameMode2})`,
-                backgroundSize: "cover",
+                backgroundSize: 'cover',
               }}
             >
               <div className="p-4">

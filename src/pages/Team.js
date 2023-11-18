@@ -1,38 +1,38 @@
-import { Fade } from "react-awesome-reveal";
+import { Fade } from 'react-awesome-reveal';
 
 const Team = () => {
   const cardData = [
     {
       id: 1,
-      image: "https://gunnyvideos.s3.amazonaws.com/marco.png",
-      title: "Card 1",
+      image: 'https://gunnyvideos.s3.amazonaws.com/marco.png',
+      title: 'Card 1',
 
       description:
-        "Anim aute id magna aliqua ad ad non deserunt sunt. Qui irure qui lorem cupidatat commodo. Elit sunt amet fugiat veniam occaecat fugiat aliqua.",
+        'Anim aute id magna aliqua ad ad non deserunt sunt. Qui irure qui lorem cupidatat commodo. Elit sunt amet fugiat veniam occaecat fugiat aliqua.',
     },
     {
       id: 2,
-      image: "https://gunnyvideos.s3.amazonaws.com/marco.png",
-      title: "Card 2",
+      image: 'https://gunnyvideos.s3.amazonaws.com/marco.png',
+      title: 'Card 2',
 
       description:
-        "Anim aute id magna aliqua ad ad non deserunt sunt. Qui irure qui lorem cupidatat commodo. Elit sunt amet fugiat veniam occaecat fugiat aliqua.",
+        'Anim aute id magna aliqua ad ad non deserunt sunt. Qui irure qui lorem cupidatat commodo. Elit sunt amet fugiat veniam occaecat fugiat aliqua.',
     },
     {
       id: 3,
-      image: "https://gunnyvideos.s3.amazonaws.com/marco.png",
-      title: "Card 3",
+      image: 'https://gunnyvideos.s3.amazonaws.com/marco.png',
+      title: 'Card 3',
 
       description:
-        "Anim aute id magna aliqua ad ad non deserunt sunt. Qui irure qui lorem cupidatat commodo. Elit sunt amet fugiat veniam occaecat fugiat aliqua.",
+        'Anim aute id magna aliqua ad ad non deserunt sunt. Qui irure qui lorem cupidatat commodo. Elit sunt amet fugiat veniam occaecat fugiat aliqua.',
     },
     {
       id: 4,
-      image: "https://gunnyvideos.s3.amazonaws.com/marco.png",
-      title: "Card 4",
+      image: 'https://gunnyvideos.s3.amazonaws.com/marco.png',
+      title: 'Card 4',
 
       description:
-        "Anim aute id magna aliqua ad ad non deserunt sunt. Qui irure qui lorem cupidatat commodo. Elit sunt amet fugiat veniam occaecat fugiat aliqua.",
+        'Anim aute id magna aliqua ad ad non deserunt sunt. Qui irure qui lorem cupidatat commodo. Elit sunt amet fugiat veniam occaecat fugiat aliqua.',
     },
   ];
   return (
@@ -45,7 +45,7 @@ const Team = () => {
 
       <div className="h-[50%] flex justify-center flex-col  text-center text-white z-10">
         <h1 className="text-5xl uppercase font-bold mb-4 md:mb-8 text-black">
-          Team
+          ·Team·
         </h1>
         <p className="text-black text-lg md:text-md sm:text-sm leading-6 md:leading-8 mb-4 md:mb-8">
           Anim aute id magna aliqua ad ad non deserunt sunt. Qui irure qui lorem
@@ -54,7 +54,7 @@ const Team = () => {
         </p>
 
         <div className="grid grid-cols-2 sm:grid-cols-2 md:grid-cols-4 lg:grid-cols-4 gap-4 z-10 p-2">
-          {cardData.map((card) => (
+          {cardData.map(card => (
             <div key={card.id}>
               <Fade direction="up" triggerOnce>
                 <div key={card.id} className="card relative">
