@@ -48,18 +48,18 @@ const Inugis = () => {
   };
 
   return (
-    <div className="relative w-75 sm:w[100%] h-[100%] sm:h-[150vh]  flex justify-center items-center">
+    <div className="relative w-75 sm:w[100%] h-[100%] sm:h-full  flex justify-center items-center">
       <img
         src="https://gunnyvideos.s3.amazonaws.com/background_04.jpg"
         alt="bg home"
         className="absolute inset-0 w-full h-full "
       />
 
-      <div className="h-[80%] flex justify-between flex-col text-center text-white z-10">
+      <div className="mt-20 h-full xl:h-[100vh] w-[75%] flex justify-center flex-col text-center text-white z-10">
         <h1 className="text-5xl uppercase font-bold mb-4 md:mb-8 text-yellow-500">
           ·Inugis·
         </h1>
-        <p className="text-lg md:text-md sm:text-sm leading-6 md:leading-8 mb-4 md:mb-8">
+        <p className="text-lg md:text-md sm:text-sm ">
           Anim aute id magna aliqua ad ad non deserunt sunt. Qui irure qui lorem
           cupidatat commodo. Elit sunt amet fugiat veniam occaecat fugiat
           aliqua.
@@ -91,17 +91,20 @@ const Inugis = () => {
             option =>
               selectedImage === option.id && (
                 <Fade key={option.id} trigger={true}>
-                  <div className="flex">
-                    <div className="flex flex-col justify-end w-96">
+                  <div className="flex w-full">
+                    <div className="flex-1 flex flex-col justify-end w-96">
                       <p className="text-white text-sm p-2">{option.lore}</p>
                     </div>
-                    <div className="flex justify-start items-center">
+                    <div className="flex-1 flex justify-start items-center">
                       <img
                         key={option.id}
                         src={option.image}
                         alt={option.id}
-                        className="w-72 sm:w-72 transition-opacity duration-500 ease-in-out"
+                        className={`w-72 sm:w-96 transition-opacity duration-500 ease-in-out`}
                       />
+                    </div>
+                    <div className="flex-1 flex-col justify-end w-96">
+                      <p className="text-white text-sm p-2"></p>
                     </div>
                   </div>
                 </Fade>

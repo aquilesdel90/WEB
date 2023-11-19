@@ -9,7 +9,7 @@ import Gema3 from '../assets/icontimeline-3.png';
 import ImageRandom from '../assets/skin.png';
 const Roadmap = () => {
   return (
-    <div className="relative w-75 sm:w[100%] h-[100%] sm:h-[150vh]  flex justify-center items-center">
+    <div className="relative  flex justify-center items-center">
       <img
         src="https://gunnyvideos.s3.amazonaws.com/background_08.png"
         alt="bg home"
@@ -27,7 +27,7 @@ const Roadmap = () => {
             fugiat aliqua.
           </p>
         </div>
-        <div className="h-[80%] flex justify-between flex-col text-center text-white z-10 roadmap-section">
+        <div className=" flex justify-between flex-col text-center text-white z-10 roadmap-section">
           <VerticalTimeline>
             <VerticalTimelineElement
               className="vertical-timeline-element--work"
