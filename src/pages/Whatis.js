@@ -57,14 +57,14 @@ const WhatIs = () => {
   }, []);
 
   return (
-    <div className="relative w-75 sm:w[100%] h-[100%] sm:h-[100vh] flex justify-center items-center flex-col p-2">
+    <div className="relative w-75 sm:w[100%] h-[100%] sm:h-[150vh] flex justify-center items-center flex-col p-2">
       <img
         src="https://gunnyvideos.s3.amazonaws.com/background_02.jpg"
         alt="bg home"
         className="absolute inset-0 w-full h-full"
       />
 
-      <div className="flex justify-between flex-col text-center text-white z-10">
+      <div className="h-full xl:h-[150vh] flex justify-center items-center flex-col text-center text-white z-10">
         <h1 className="text-xl sm:text-5xl uppercase font-bold mb-4 md:mb-8 text-yellow-500">
           ·¿Qué es gunny?·
         </h1>
@@ -73,34 +73,34 @@ const WhatIs = () => {
           cupidatat commodo. Elit sunt amet fugiat veniam occaecat fugiat
           aliqua...
         </p>
-      </div>
 
-      <div className="w-100 grid grid-cols-2 sm:grid-cols-2 md:grid-cols-4 lg:grid-cols-4 gap-4 z-10 p-2">
-        <Fade cascade damping={0.2}>
-          {cardData.map(card => (
-            <div key={card.id}>
-              <div key={card.id} className="h-[100%] card relative">
-                <img
-                  src={card.image}
-                  alt={card.title}
-                  className="rounded-lg w-full h-[100%] sm:h-[300px] object-cover"
-                />
-                <div className="flex justify-start items-center h-full flex-col absolute bottom-0 left-0 w-full p-4">
-                  <h3 className="text-yellow-500 uppercase text-sm sm:text-lg font-bold">
-                    {card.title}
-                  </h3>
-                  <p className="text-white text-sm">{card.description}</p>
+        <div className="w-100 grid grid-cols-2 sm:grid-cols-2 md:grid-cols-4 lg:grid-cols-4 gap-4 z-10 p-2">
+          <Fade cascade damping={0.2}>
+            {cardData.map(card => (
+              <div key={card.id}>
+                <div key={card.id} className="h-[100%] card relative">
+                  <img
+                    src={card.image}
+                    alt={card.title}
+                    className="rounded-lg w-full h-[100%] sm:h-[300px] object-cover"
+                  />
+                  <div className="flex justify-start items-center h-full flex-col absolute bottom-0 left-0 w-full p-4">
+                    <h3 className="text-yellow-500 uppercase text-sm sm:text-lg font-bold">
+                      {card.title}
+                    </h3>
+                    <p className="text-white text-sm">{card.description}</p>
+                  </div>
+
+                  <img
+                    src={card.inugi}
+                    alt={`Inugi ${card.title}`}
+                    className="absolute bottom-[-70px] hidden sm:inline-block	 left-0 w-[90%] h-[150px]"
+                  />
                 </div>
-
-                <img
-                  src={card.inugi}
-                  alt={`Inugi ${card.title}`}
-                  className="absolute bottom-[-70px] hidden sm:inline-block	 left-0 w-[90%] h-[150px]"
-                />
               </div>
-            </div>
-          ))}
-        </Fade>
+            ))}
+          </Fade>
+        </div>
       </div>
     </div>
   );

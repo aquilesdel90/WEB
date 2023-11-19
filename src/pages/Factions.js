@@ -1,10 +1,11 @@
-import React, { useState, useEffect, useRef } from 'react';
+import React, { useState, useEffect, useRef, lazy, Suspense } from 'react';
 import { Fade } from 'react-awesome-reveal';
 import AirIcon from '../assets/air.png';
 import OthilaIcon from '../assets/othila.png';
 import PethIcon from '../assets/peth.png';
 import RatioIcon from '../assets/ratio.png';
 import ThurizasIcon from '../assets/thurizas.png';
+import LazyImage from '../components/LazyImage';
 
 const imageOptions = [
   {
@@ -79,29 +80,27 @@ const Factions = () => {
   };
 
   return (
-    <div className="relative h-[100%] sm:h-[100vh] flex justify-center items-center">
+    <div className="relative flex justify-center items-center">
       <img
         src="https://gunnyvideos.s3.amazonaws.com/background_03.jpg"
         alt="bg home"
-        className="absolute inset-0 w-full h-full "
+        className="absolute inset-0 w-full h-full"
       />
 
-      <div className="p-4 flex justify-between flex-col text-center text-white z-10">
-        <div className="sm:relative md:top-[105px] xl:top-[145px] lg:top-[135px] sm:top-[100px] w-[100%] h-[50%] sm:h-[80vh] flex justify-center items-center flex-col">
-          <div className="sm:mb-4">
-            <h1 className="text-5xl uppercase font-bold  text-yellow-500">
-              ·Factions·
-            </h1>
-          </div>
-          <div className="w-[70%] sm:mb-4">
-            <p className="text-lg md:text-md sm:text-sm ">
-              Anim aute id magna aliqua ad ad non deserunt sunt. Qui irure qui
-              lorem cupidatat commodo. Elit sunt amet fugiat veniam occaecat
-              fugiat aliqua. Anim aute id magna aliqua ad ad non deserunt sunt.
-              Qui irure qui lorem cupidatat commodo. Elit sunt amet fugiat
-              veniam occaecat fugiat aliqua.
-            </p>
-          </div>
+      <div className="mt-20 h-full xl:h-[100vh] w-[75%] flex justify-center items-center flex-col text-center text-white z-10">
+        <h1 className="text-5xl uppercase font-bold  text-yellow-500">
+          ·Factions·
+        </h1>
+
+        <p className="text-lg md:text-md sm:text-sm ">
+          Anim aute id magna aliqua ad ad non deserunt sunt. Qui irure qui lorem
+          cupidatat commodo. Elit sunt amet fugiat veniam occaecat fugiat
+          aliqua. Anim aute id magna aliqua ad ad non deserunt sunt. Qui irure
+          qui lorem cupidatat commodo. Elit sunt amet fugiat veniam occaecat
+          fugiat aliqua.
+        </p>
+
+        <div className="flex justify-center items-center flex-col">
           {imageOptions.map(
             option =>
               selectedImage === option.id && (
@@ -109,13 +108,10 @@ const Factions = () => {
                   <Fade key={option.id} trigger={true}>
                     <div key={option.id} className="flex">
                       <div className="flex justify-center items-center">
-                        <img
-                          ref={imgRef}
+                        <LazyImage
                           src={getImageUrl(selectedImage)}
                           alt={selectedImage}
-                          className={`sm:w-[85%] w-[100%] ${
-                            imageLoaded ? '' : 'hidden'
-                          } transition-opacity duration-500 ease-in-out`}
+                          className={`w-72 sm:w-96 transition-opacity duration-500 ease-in-out`}
                         />
                       </div>
                     </div>
@@ -125,10 +121,10 @@ const Factions = () => {
           )}
         </div>
 
-        <div className="relative top-[30px] z-[10] w-[100%] h-[50%] flex items-center justify-center gap-4">
+        <div className="relative z-[10] w-[100%] h-[50%]  flex items-center justify-center gap-4">
           {imageOptions.map(option => (
             <div
-              className="w-100 flex justify-center items-center flex-col"
+              className="flex justify-center items-center flex-col"
               key={option.id}
             >
               <div key={option.id}>

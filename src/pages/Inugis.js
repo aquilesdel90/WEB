@@ -48,7 +48,7 @@ const Inugis = () => {
   };
 
   return (
-    <div className="relative h-[100vh] flex justify-center items-center">
+    <div className="relative w-75 sm:w[100%] h-[100%] sm:h-[150vh]  flex justify-center items-center">
       <img
         src="https://gunnyvideos.s3.amazonaws.com/background_04.jpg"
         alt="bg home"
@@ -72,7 +72,7 @@ const Inugis = () => {
                 key={option.id}
                 src={option.icon}
                 alt={`${option.id}Icon`}
-                className={`w-14 sm:w-28 cursor-pointer transition-opacity duration-500 ease-in-out ${
+                className={`w-14 sm:w-20 h-14 sm:h-20 cursor-pointer transition-opacity duration-500 ease-in-out ${
                   selectedImage === option.id
                     ? 'border-4 border-yellow-500 opacity-100 z-10 rounded-full'
                     : 'opacity-75'
@@ -100,7 +100,7 @@ const Inugis = () => {
                         key={option.id}
                         src={option.image}
                         alt={option.id}
-                        className="sm:w-[50%] w-[100%]"
+                        className="w-72 sm:w-72 transition-opacity duration-500 ease-in-out"
                       />
                     </div>
                   </div>

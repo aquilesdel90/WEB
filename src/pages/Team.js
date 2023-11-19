@@ -36,14 +36,14 @@ const Team = () => {
     },
   ];
   return (
-    <div className="relative h-[100vh] flex justify-center items-center">
+    <div className="relative w-75 sm:w[100%] h-[100%] sm:h-[100vh] flex justify-center items-center">
       <img
         src="https://gunnyvideos.s3.amazonaws.com/background_09.png"
         alt="bg home"
         className="absolute inset-0 w-full h-full "
       />
 
-      <div className="h-[50%] flex justify-center flex-col  text-center text-white z-10">
+      <div className="h-[40%] flex justify-center flex-col  text-center text-white z-10">
         <h1 className="text-5xl uppercase font-bold mb-4 md:mb-8 text-black">
           ·Team·
         </h1>
