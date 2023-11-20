@@ -6,6 +6,9 @@ import {
 import Gema1 from '../assets/icontimeline-1.png';
 import Gema2 from '../assets/icontimeline-2.png';
 import Gema3 from '../assets/icontimeline-3.png';
+import Gema4 from '../assets/icontimeline-4.png';
+import Gema5 from '../assets/icontimeline-5.png';
+
 import ImageRandom from '../assets/skin.png';
 const Roadmap = () => {
   return (
@@ -44,7 +47,7 @@ const Roadmap = () => {
               contentArrowStyle={{
                 borderRight: 'transparent',
               }}
-              date="2022"
+              date="2022 Q1"
               iconStyle={{ background: 'rgb(33, 150, 243)', color: '#fff' }}
               icon={<img src={Gema1} alt="gema1" />}
             >
@@ -53,14 +56,19 @@ const Roadmap = () => {
                 <img src={ImageRandom} alt="imagenIzquierda" />
               </div>
               <div className="flex-1 w-[50%]">
-                <h3 className="text-yellow-500 font-bold uppercase">
-                  Creative Director
-                </h3>
+                <h3 className="text-yellow-500 font-bold uppercase">Phase 1</h3>
 
-                <span className="text-md font-sans">
-                  Creative Direction, User Experience, Visual Design, Project
-                  Management, Team Leading
-                </span>
+                <ul>
+                  <li className="text-decoration-none text-md font-sans">
+                    Team Formation
+                  </li>
+                  <li className="text-decoration-none text-md font-sans">
+                    Creative Project Planning
+                  </li>
+                  <li className="text-decoration-none text-md font-sans">
+                    Value Proposition
+                  </li>
+                </ul>
               </div>
             </VerticalTimelineElement>
 
@@ -79,7 +87,7 @@ const Roadmap = () => {
               contentArrowStyle={{
                 borderRight: 'transparent',
               }}
-              date="2022"
+              date="2022 Q2"
               iconStyle={{ background: 'rgb(33, 150, 243)', color: '#fff' }}
               icon={<img src={Gema2} alt="gema1" />}
             >
@@ -88,14 +96,22 @@ const Roadmap = () => {
                 <img src={ImageRandom} alt="imagenIzquierda" />
               </div>
               <div className="flex-1 w-[50%]">
-                <h3 className="text-yellow-500 font-bold uppercase">
-                  Creative Director
-                </h3>
+                <h3 className="text-yellow-500 font-bold uppercase">Phase 2</h3>
 
-                <span className="text-md font-sans">
-                  Creative Direction, User Experience, Visual Design, Project
-                  Management, Team Leading
-                </span>
+                <ul>
+                  <li className="text-decoration-none text-md font-sans">
+                    Creation Economic Model
+                  </li>
+                  <li className="text-decoration-none text-md font-sans">
+                    Development Whitepaper
+                  </li>
+                  <li className="text-decoration-none text-md font-sans">
+                    Website Development
+                  </li>
+                  <li className="text-decoration-none text-md font-sans">
+                    Value Proposition
+                  </li>
+                </ul>
               </div>
             </VerticalTimelineElement>
 
@@ -114,7 +130,7 @@ const Roadmap = () => {
               contentArrowStyle={{
                 borderRight: 'transparent',
               }}
-              date="2022"
+              date="2023 Q3"
               iconStyle={{ background: 'rgb(33, 150, 243)', color: '#fff' }}
               icon={<img src={Gema3} alt="gema1" />}
             >
@@ -123,14 +139,28 @@ const Roadmap = () => {
                 <img src={ImageRandom} alt="imagenIzquierda" />
               </div>
               <div className="flex-1 w-[50%]">
-                <h3 className="text-yellow-500 font-bold uppercase">
-                  Creative Director
-                </h3>
+                <h3 className="text-yellow-500 font-bold uppercase">Phase 3</h3>
 
-                <span className="text-md font-sans">
-                  Creative Direction, User Experience, Visual Design, Project
-                  Management, Team Leading
-                </span>
+                <ul>
+                  <li className="text-decoration-none text-md font-sans">
+                    Alpha develompment
+                  </li>
+                  <li className="text-decoration-none text-md font-sans">
+                    AWS Database Creation
+                  </li>
+                  <li className="text-decoration-none text-md font-sans">
+                    Creation of Assets on the Algorand Network.
+                  </li>
+                  <li className="text-decoration-none text-md font-sans">
+                    Gacha System Development
+                  </li>
+                  <li className="text-decoration-none text-md font-sans">
+                    Inugis Airdrop
+                  </li>
+                  <li className="text-decoration-none text-md font-sans">
+                    Heroes Airdrop
+                  </li>
+                </ul>
               </div>
             </VerticalTimelineElement>
 
@@ -149,28 +179,35 @@ const Roadmap = () => {
               contentArrowStyle={{
                 borderRight: 'transparent',
               }}
-              date="2022"
+              date="2023 Q4"
               iconStyle={{ background: 'rgb(33, 150, 243)', color: '#fff' }}
-              icon={<img src={Gema1} alt="gema1" />}
+              icon={<img src={Gema4} alt="gema1" />}
             >
               <div className="flex-1 w-[50%] p-0">
                 {/* Contenido a la izquierda */}
                 <img src={ImageRandom} alt="imagenIzquierda" />
               </div>
               <div className="flex-1 w-[50%]">
-                <h3 className="text-yellow-500 font-bold uppercase">
-                  Creative Director
-                </h3>
+                <h3 className="text-yellow-500 font-bold uppercase">Phase 5</h3>
 
-                <span className="text-md font-sans">
-                  Creative Direction, User Experience, Visual Design, Project
-                  Management, Team Leading
-                </span>
+                <ul>
+                  <li className="text-decoration-none text-md font-sans">
+                    Cooperative private Alpha Release
+                  </li>
+                  <li className="text-decoration-none text-md font-sans">
+                    Gacha System Launch
+                  </li>
+                  <li className="text-decoration-none text-md font-sans">
+                    Cooperative Open Alpha Release
+                  </li>
+                  <li className="text-decoration-none text-md font-sans">
+                    Tournament Launch.
+                  </li>
+                </ul>
               </div>
             </VerticalTimelineElement>
 
             <VerticalTimelineElement
-              className="vertical-timeline-element--work"
               contentStyle={{
                 padding: 0,
                 width: '45%',
@@ -184,93 +221,36 @@ const Roadmap = () => {
               contentArrowStyle={{
                 borderRight: 'transparent',
               }}
-              date="2022"
+              date="2024"
               iconStyle={{ background: 'rgb(33, 150, 243)', color: '#fff' }}
-              icon={<img src={Gema1} alt="gema1" />}
+              icon={<img src={Gema5} alt="gema1" />}
             >
               <div className="flex-1 w-[50%] p-0">
                 {/* Contenido a la izquierda */}
                 <img src={ImageRandom} alt="imagenIzquierda" />
               </div>
               <div className="flex-1 w-[50%]">
-                <h3 className="text-yellow-500 font-bold uppercase">
-                  Creative Director
-                </h3>
-
-                <span className="text-md font-sans">
-                  Creative Direction, User Experience, Visual Design, Project
-                  Management, Team Leading
-                </span>
-              </div>
-            </VerticalTimelineElement>
-
-            <VerticalTimelineElement
-              className="vertical-timeline-element--work"
-              contentStyle={{
-                padding: 0,
-                width: '45%',
-                border: '10px solid #5930B7',
-                color: '#fff',
-                backgroundColor: '#5C567B',
-                display: 'flex',
-                flexDirection: 'row',
-                alignItems: 'center',
-              }}
-              contentArrowStyle={{
-                borderRight: 'transparent',
-              }}
-              date="2022"
-              iconStyle={{ background: 'rgb(33, 150, 243)', color: '#fff' }}
-              icon={<img src={Gema1} alt="gema1" />}
-            >
-              <div className="flex-1 w-[50%] p-0">
-                {/* Contenido a la izquierda */}
-                <img src={ImageRandom} alt="imagenIzquierda" />
-              </div>
-              <div className="flex-1 w-[50%]">
-                <h3 className="text-yellow-500 font-bold uppercase">
-                  Creative Director
-                </h3>
-
-                <span className="text-md font-sans">
-                  Creative Direction, User Experience, Visual Design, Project
-                  Management, Team Leading
-                </span>
-              </div>
-            </VerticalTimelineElement>
-
-            <VerticalTimelineElement
-              className="vertical-timeline-element--work"
-              contentStyle={{
-                padding: 0,
-                width: '45%',
-                border: '10px solid #5930B7',
-                color: '#fff',
-                backgroundColor: '#5C567B',
-                display: 'flex',
-                flexDirection: 'row',
-                alignItems: 'center',
-              }}
-              contentArrowStyle={{
-                borderRight: 'transparent',
-              }}
-              date="2022"
-              iconStyle={{ background: 'rgb(33, 150, 243)', color: '#fff' }}
-              icon={<img src={Gema1} alt="gema1" />}
-            >
-              <div className="flex-1 w-[50%] p-0">
-                {/* Contenido a la izquierda */}
-                <img src={ImageRandom} alt="imagenIzquierda" />
-              </div>
-              <div className="flex-1 w-[50%]">
-                <h3 className="text-yellow-500 font-bold uppercase">
-                  Creative Director
-                </h3>
-
-                <span className="text-md font-sans">
-                  Creative Direction, User Experience, Visual Design, Project
-                  Management, Team Leading
-                </span>
+                <h3 className="text-yellow-500 font-bold uppercase">Phase 6</h3>
+                <ul>
+                  <li className="text-decoration-none text-md font-sans inline-block">
+                    Development of 2nd Generation Inugis
+                  </li>
+                  <li className="text-decoration-none text-md font-sans">
+                    Continuing PVP Game Development
+                  </li>
+                  <li className="text-decoration-none text-md font-sans">
+                    UI/UX Update
+                  </li>
+                  <li className="text-decoration-none text-md font-sans">
+                    Development of Animated Short Films
+                  </li>
+                  <li className="text-decoration-none text-md font-sans">
+                    PVP Beta Launch
+                  </li>
+                  <li className="text-decoration-none text-md font-sans">
+                    First battle pass release
+                  </li>
+                </ul>
               </div>
             </VerticalTimelineElement>
           </VerticalTimeline>

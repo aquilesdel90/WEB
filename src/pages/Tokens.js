@@ -10,13 +10,14 @@ const Tokens = () => {
       <div className="flex flex-col-reverse sm:flex-row flex-1 justify-center items-center max-w-6xl mx-auto space-y-4 z-10">
         <div className="flex-1 flex justify-center items-center max-w-6xl mx-auto space-y-4 flex-col">
           <h2 className="text-yellow-500 text-3xl font-bold text-center sm:text-start uppercase">
-            Tokens
+            Digital Collectibles
           </h2>
           <div className="flex items-end w-full p-4">
             <p className="text-white text-xl text-center sm:text-start">
-              Anim aute id magna aliqua ad ad non deserunt sunt. Qui irure qui
-              lorem cupidatat commodo. Elit sunt amet fugiat veniam occaecat
-              fugiat aliqua.
+              In Gunny, all your items are embodied in these digital cards, a
+              testament to your ownership. With the freedom to collect, gift to
+              friends, or even sell to those seeking your valuable possessions,
+              these cards empower you to shape your destiny in the virtual realm
             </p>
           </div>
         </div>

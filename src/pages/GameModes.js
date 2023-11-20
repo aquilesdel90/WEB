@@ -13,14 +13,15 @@ const GameModes = () => {
       />
 
       <div className="h-[80%] flex justify-between flex-col text-center text-white z-10">
-        <h2 className="text-yellow-500 text-5xl uppercase font-bold text-center">
+        <h2 className="mb-4 text-5xl uppercase font-bold text-yellow-500">
           ·Game Modes·
         </h2>
-        <div className="p-4">
-          <p className="text-white text-lg md:text-2xl text-center">
-            Anim aute id magna aliqua ad ad non deserunt sunt. Qui irure qui
-            lorem cupidatat commodo. Elit sunt amet fugiat veniam occaecat
-            fugiat aliqua.
+        <div className="flex items-center justify-center mb-4 text-lg md:text-md sm:text-sm ">
+          <p className="mb-4 text-lg md:text-md sm:text-sm w-[75%]">
+            Embark on thrilling adventures in Gunny! Team up with friends for
+            PVE battles or dive straight into intense PVP matchups, competing
+            against other users online in epic clashes. Choose your path and
+            conquer the battlefield with strategic prowess and camaraderie!
           </p>
         </div>
 

@@ -19,9 +19,10 @@ const Skins = () => {
             </h2>
             <div className="flex items-center sm:items-end w-[100%] sm:w-[70%]">
               <p className="container text-black text-xl text-center sm:text-end">
-                Anim aute id magna aliqua ad ad non deserunt sunt. Qui irure qui
-                lorem cupidatat commodo. Elit sunt amet fugiat veniam occaecat
-                fugiat aliqua.
+                Make your mark in Gunny! Your pets aren't just pets; they're
+                your canvas for individuality. Craft a unique identity and stand
+                out in the crowd, as you personalize them with exclusive skins.
+                Embrace your distinctiveness and be a true force of one in Gunny
               </p>
             </div>
             <div className="mt-10 flex items-center justify-center gap-x-6">

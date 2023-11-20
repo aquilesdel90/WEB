@@ -59,10 +59,11 @@ const Inugis = () => {
         <h1 className="mb-4 text-5xl uppercase font-bold text-yellow-500">
           ·Inugis·
         </h1>
-        <p className="mb-4 text-lg md:text-md sm:text-sm ">
-          Anim aute id magna aliqua ad ad non deserunt sunt. Qui irure qui lorem
-          cupidatat commodo. Elit sunt amet fugiat veniam occaecat fugiat
-          aliqua.
+        <p className="mb-4 text-lg md:text-md sm:text-sm w-[75%]">
+          Behold the adorable yet formidable pets, each bestowed with a unique
+          elemental power and abilities, essential in the grand battle ahead.
+          Elevate their prowess, forge strategic alliances with friends, and
+          ascend to become the unparalleled champion!
         </p>
 
         <div className="relative z-[10] w-[100%] h-[50%] flex items-center justify-center">

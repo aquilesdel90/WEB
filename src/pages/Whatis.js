@@ -10,15 +10,14 @@ const WhatIs = () => {
       title: 'Card 1',
       inugi: 'https://gunnyvideos.s3.amazonaws.com/inugibox-1.png',
       description:
-        'Anim aute id magna aliqua ad ad non deserunt sunt. Qui irure qui lorem cupidatat commodo. Elit sunt amet fugiat veniam occaecat fugiat aliqua.',
+        'Collect unique elemental pets and unleash their extraordinary abilities!',
     },
     {
       id: 2,
       image: 'https://gunnyvideos.s3.amazonaws.com/card2.png',
       title: 'Card 2',
       inugi: 'https://gunnyvideos.s3.amazonaws.com/inugibox-2.png',
-      description:
-        'Anim aute id magna aliqua ad ad non deserunt sunt. Qui irure qui lorem cupidatat commodo. Elit sunt amet fugiat veniam occaecat fugiat aliqua.',
+      description: 'Compete online with your favorite companion!',
     },
     {
       id: 3,
@@ -26,7 +25,7 @@ const WhatIs = () => {
       title: 'Card 3',
       inugi: 'https://gunnyvideos.s3.amazonaws.com/inugibox-3.png',
       description:
-        'Anim aute id magna aliqua ad ad non deserunt sunt. Qui irure qui lorem cupidatat commodo. Elit sunt amet fugiat veniam occaecat fugiat aliqua.',
+        'Customize your pets, characters, and weapons with unique skins!',
     },
     {
       id: 4,
@@ -34,7 +33,7 @@ const WhatIs = () => {
       title: 'Card 4',
       inugi: 'https://gunnyvideos.s3.amazonaws.com/inugibox-4.png',
       description:
-        'Anim aute id magna aliqua ad ad non deserunt sunt. Qui irure qui lorem cupidatat commodo. Elit sunt amet fugiat veniam occaecat fugiat aliqua.',
+        'Ascend to greatness atop our leaderboard and claim legendary prizes as the ultimate champion!',
     },
   ];
 
