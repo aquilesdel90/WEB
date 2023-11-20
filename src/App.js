@@ -15,15 +15,33 @@ function App() {
   return (
     <div className="relative">
       <Navbar />
-      <Home />
-      <Whatis />
-      <Factions />
-      <Inugis />
-      <Skins />
-      <GameModes />
-      <Tokens />
-      <Roadmap />
-      <Team />
+      <div id="home">
+        <Home />
+      </div>
+      <div id="whatis">
+        <Whatis />
+      </div>
+      <div id="factions">
+        <Factions />
+      </div>
+      <div id="inugis">
+        <Inugis />
+      </div>
+      <div id="skins">
+        <Skins />
+      </div>
+      <div id="game-modes">
+        <GameModes />
+      </div>
+      <div id="tokens">
+        <Tokens />
+      </div>
+      <div id="roadmap">
+        <Roadmap />
+      </div>
+      <div id="team">
+        <Team />
+      </div>
       <Footer />
     </div>
   );

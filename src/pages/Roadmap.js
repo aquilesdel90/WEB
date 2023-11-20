@@ -51,10 +51,6 @@ const Roadmap = () => {
               iconStyle={{ background: 'rgb(33, 150, 243)', color: '#fff' }}
               icon={<img src={Gema1} alt="gema1" />}
             >
-              <div className="flex-1 w-[50%] p-0">
-                {/* Contenido a la izquierda */}
-                <img src={ImageRandom} alt="imagenIzquierda" />
-              </div>
               <div className="flex-1 w-[50%]">
                 <h3 className="text-yellow-500 font-bold uppercase">Phase 1</h3>
 
@@ -91,10 +87,6 @@ const Roadmap = () => {
               iconStyle={{ background: 'rgb(33, 150, 243)', color: '#fff' }}
               icon={<img src={Gema2} alt="gema1" />}
             >
-              <div className="flex-1 w-[50%] p-0">
-                {/* Contenido a la izquierda */}
-                <img src={ImageRandom} alt="imagenIzquierda" />
-              </div>
               <div className="flex-1 w-[50%]">
                 <h3 className="text-yellow-500 font-bold uppercase">Phase 2</h3>
 
@@ -134,10 +126,6 @@ const Roadmap = () => {
               iconStyle={{ background: 'rgb(33, 150, 243)', color: '#fff' }}
               icon={<img src={Gema3} alt="gema1" />}
             >
-              <div className="flex-1 w-[50%] p-0">
-                {/* Contenido a la izquierda */}
-                <img src={ImageRandom} alt="imagenIzquierda" />
-              </div>
               <div className="flex-1 w-[50%]">
                 <h3 className="text-yellow-500 font-bold uppercase">Phase 3</h3>
 
@@ -183,10 +171,6 @@ const Roadmap = () => {
               iconStyle={{ background: 'rgb(33, 150, 243)', color: '#fff' }}
               icon={<img src={Gema4} alt="gema1" />}
             >
-              <div className="flex-1 w-[50%] p-0">
-                {/* Contenido a la izquierda */}
-                <img src={ImageRandom} alt="imagenIzquierda" />
-              </div>
               <div className="flex-1 w-[50%]">
                 <h3 className="text-yellow-500 font-bold uppercase">Phase 5</h3>
 
@@ -225,10 +209,6 @@ const Roadmap = () => {
               iconStyle={{ background: 'rgb(33, 150, 243)', color: '#fff' }}
               icon={<img src={Gema5} alt="gema1" />}
             >
-              <div className="flex-1 w-[50%] p-0">
-                {/* Contenido a la izquierda */}
-                <img src={ImageRandom} alt="imagenIzquierda" />
-              </div>
               <div className="flex-1 w-[50%]">
                 <h3 className="text-yellow-500 font-bold uppercase">Phase 6</h3>
                 <ul>

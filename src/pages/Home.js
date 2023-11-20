@@ -15,11 +15,7 @@ export default function Home() {
           alt="logo"
           className="sm:w-72 w-48 mx-auto"
         />
-        <p className="text-lg md:text-md sm:text-sm w-[75%]">
-          Anim aute id magna aliqua ad ad non deserunt sunt. Qui irure qui lorem
-          cupidatat commodo. Elit sunt amet fugiat veniam occaecat fugiat
-          aliqua.
-        </p>
+
         <div className="sm:mt-8 flex items-center justify-center gap-x-4">
           <a
             href="#"
