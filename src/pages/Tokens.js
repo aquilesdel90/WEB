@@ -1,5 +1,3 @@
-import Carts from '../assets/carts.png';
-
 const Tokens = () => {
   return (
     <div className="relative h-[100vh] flex justify-center items-center">

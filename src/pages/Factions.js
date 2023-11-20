@@ -88,11 +88,11 @@ const Factions = () => {
       />
 
       <div className="mt-14 flex justify-center items-center flex-col text-center text-white z-10">
-        <h1 className="text-5xl uppercase font-bold text-yellow-500">
+        <h1 className="mb-4 text-5xl uppercase font-bold text-yellow-500">
           ·Factions·
         </h1>
 
-        <p className="text-lg md:text-md sm:text-sm w-[75%]">
+        <p className="mb-4 text-lg md:text-md sm:text-sm w-[75%]">
           Anim aute id magna aliqua ad ad non deserunt sunt. Qui irure qui lorem
           cupidatat commodo. Elit sunt amet fugiat veniam occaecat fugiat
           aliqua. Anim aute id magna aliqua ad ad non deserunt sunt. Qui irure

@@ -65,10 +65,10 @@ const WhatIs = () => {
       />
 
       <div className="mt-10 mb-20 h-full w-full xl:h-full flex justify-center items-center flex-col text-center text-white z-10">
-        <h1 className="text-xl sm:text-5xl uppercase font-bold mb-4 md:mb-8 text-yellow-500">
+        <h1 className="mb-4 text-xl sm:text-5xl uppercase font-bold md:mb-8 text-yellow-500">
           ·¿Qué es gunny?·
         </h1>
-        <p className="text-lg md:text-md sm:text-sm w-[75%]">
+        <p className="mb-4 text-lg md:text-md sm:text-sm w-[75%]">
           Anim aute id magna aliqua ad ad non deserunt sunt. Qui irure qui lorem
           cupidatat commodo. Elit sunt amet fugiat veniam occaecat fugiat
           aliqua...
