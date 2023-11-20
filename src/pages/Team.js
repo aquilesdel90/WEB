@@ -44,12 +44,7 @@ const Team = () => {
       />
 
       <div className="mt-10 h-[40%] flex justify-center flex-col  text-center text-white z-10">
-        <h1 className="text-5xl uppercase font-bold  text-black">·Team·</h1>
-        <p className="text-black text-lg md:text-md sm:text-sm ">
-          Anim aute id magna aliqua ad ad non deserunt sunt. Qui irure qui lorem
-          cupidatat commodo. Elit sunt amet fugiat veniam occaecat fugiat
-          aliqua...
-        </p>
+        <h1 className="text-5xl uppercase font-bold  text-[#3A2C6A]">·Team·</h1>
 
         <div className="grid grid-cols-2 sm:grid-cols-2 md:grid-cols-4 lg:grid-cols-4 gap-4 z-10 p-2">
           {cardData.map(card => (
