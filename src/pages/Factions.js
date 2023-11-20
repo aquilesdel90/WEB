@@ -1,4 +1,4 @@
-import React, { useState, useEffect, useRef, lazy, Suspense } from 'react';
+import React, { useState, useEffect, useRef } from 'react';
 import { Fade } from 'react-awesome-reveal';
 import AirIcon from '../assets/air.png';
 import OthilaIcon from '../assets/othila.png';
@@ -80,19 +80,19 @@ const Factions = () => {
   };
 
   return (
-    <div className="relative flex justify-center items-center">
+    <div className="relative h-full xl:h-[100%] w-[100%] flex justify-center items-center">
       <img
         src="https://gunnyvideos.s3.amazonaws.com/background_03.jpg"
         alt="bg home"
         className="absolute inset-0 w-full h-full"
       />
 
-      <div className="mt-20 h-full xl:h-[100vh] w-[75%] flex justify-center items-center flex-col text-center text-white z-10">
-        <h1 className="text-5xl uppercase font-bold  text-yellow-500">
+      <div className="mt-14 flex justify-center items-center flex-col text-center text-white z-10">
+        <h1 className="text-5xl uppercase font-bold text-yellow-500">
           ·Factions·
         </h1>
 
-        <p className="text-lg md:text-md sm:text-sm ">
+        <p className="text-lg md:text-md sm:text-sm w-[75%]">
           Anim aute id magna aliqua ad ad non deserunt sunt. Qui irure qui lorem
           cupidatat commodo. Elit sunt amet fugiat veniam occaecat fugiat
           aliqua. Anim aute id magna aliqua ad ad non deserunt sunt. Qui irure
@@ -111,7 +111,7 @@ const Factions = () => {
                         <LazyImage
                           src={getImageUrl(selectedImage)}
                           alt={selectedImage}
-                          className={`w-72 sm:w-96 transition-opacity duration-500 ease-in-out`}
+                          className={`w-72 sm:w-[80%] transition-opacity duration-500 ease-in-out`}
                         />
                       </div>
                     </div>
@@ -121,7 +121,7 @@ const Factions = () => {
           )}
         </div>
 
-        <div className="relative z-[10] w-[100%] h-[50%]  flex items-center justify-center gap-4">
+        <div className="relative z-[10] w-[100%] h-[50%] flex items-center justify-center">
           {imageOptions.map(option => (
             <div
               className="flex justify-center items-center flex-col"

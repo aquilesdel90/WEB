@@ -9,13 +9,13 @@ export default function Home() {
         className="absolute inset-0 w-full h-full "
       />
 
-      <div className="text-center text-white z-10">
+      <div className="flex justify-center items-center flex-col text-center text-white z-10">
         <img
           src="https://gunnyvideos.s3.amazonaws.com/logo.png"
           alt="logo"
           className="sm:w-72 w-48 mx-auto"
         />
-        <p className="mt-4 text-sm md:text-lg sm:text-xl leading-6 md:leading-8">
+        <p className="text-lg md:text-md sm:text-sm w-[75%]">
           Anim aute id magna aliqua ad ad non deserunt sunt. Qui irure qui lorem
           cupidatat commodo. Elit sunt amet fugiat veniam occaecat fugiat
           aliqua.

@@ -5,7 +5,7 @@ import GameMode2 from '../assets/gamemode2.png';
 
 const GameModes = () => {
   return (
-    <div className="relative w-75 sm:w[100%] h-[100%] sm:h-[150vh] flex justify-center items-center">
+    <div className="relative h-full xl:h-[100%] w-[100%] flex justify-center items-center">
       <img
         src="https://gunnyvideos.s3.amazonaws.com/background_06.png"
         alt="bg home"

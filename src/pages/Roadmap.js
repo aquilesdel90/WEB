@@ -9,7 +9,7 @@ import Gema3 from '../assets/icontimeline-3.png';
 import ImageRandom from '../assets/skin.png';
 const Roadmap = () => {
   return (
-    <div className="relative  flex justify-center items-center">
+    <div className="relative h-full xl:h-[100%] w-[100%] flex justify-center items-center">
       <img
         src="https://gunnyvideos.s3.amazonaws.com/background_08.png"
         alt="bg home"

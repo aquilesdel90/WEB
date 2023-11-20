@@ -57,18 +57,18 @@ const WhatIs = () => {
   }, []);
 
   return (
-    <div className="relative w-75 sm:w[100%] h-[100%] sm:h-[150vh] flex justify-center items-center flex-col p-2">
+    <div className="relative h-full xl:h-[100%] w-[100%] flex justify-center items-center flex-col p-2">
       <img
         src="https://gunnyvideos.s3.amazonaws.com/background_02.jpg"
         alt="bg home"
         className="absolute inset-0 w-full h-full"
       />
 
-      <div className="h-full xl:h-[150vh] flex justify-center items-center flex-col text-center text-white z-10">
+      <div className="mt-10 mb-20 h-full w-full xl:h-full flex justify-center items-center flex-col text-center text-white z-10">
         <h1 className="text-xl sm:text-5xl uppercase font-bold mb-4 md:mb-8 text-yellow-500">
           ·¿Qué es gunny?·
         </h1>
-        <p className="text-sm sm:text-xl leading-6 md:leading-8 mb-4 md:mb-8">
+        <p className="text-lg md:text-md sm:text-sm w-[75%]">
           Anim aute id magna aliqua ad ad non deserunt sunt. Qui irure qui lorem
           cupidatat commodo. Elit sunt amet fugiat veniam occaecat fugiat
           aliqua...

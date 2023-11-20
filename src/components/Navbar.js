@@ -1,21 +1,22 @@
-import { Bars3Icon, XMarkIcon } from "@heroicons/react/24/outline";
-import React, { useState } from "react";
-import { RiTelegramLine, RiTwitterXFill } from "react-icons/ri";
-import Logo from "../assets/gunnylogo.png";
-import { Dialog } from "@headlessui/react";
+import { Bars3Icon, XMarkIcon } from '@heroicons/react/24/outline';
+import React, { useState } from 'react';
+import { RiTelegramLine, RiTwitterXFill } from 'react-icons/ri';
+
+import { Dialog } from '@headlessui/react';
 
 const navigation = [
-  { name: "Home", href: "#" },
-  { name: "What is ?", href: "#" },
-  { name: "Factions", href: "#" },
-  { name: "Inugis", href: "#" },
+  { name: 'Home', href: '#' },
+  { name: 'What is Gunny?', href: '#' },
+  { name: 'Factions', href: '#' },
+  { name: 'Inugis', href: '#' },
+  { name: 'Roadmap', href: '#' },
 ];
 
 const Navbar = () => {
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
   return (
     <nav
-      className="flex items-center justify-between p-6 lg:px-8"
+      className="w-full fixed z-20 flex items-center justify-center p-6 lg:px-8"
       aria-label="Global"
     >
       <div className="flex lg:flex-1"></div>
@@ -30,7 +31,7 @@ const Navbar = () => {
         </button>
       </div>
       <div className="hidden lg:flex lg:gap-x-12">
-        {navigation.map((item) => (
+        {navigation.map(item => (
           <a
             key={item.name}
             href={item.href}
@@ -81,7 +82,7 @@ const Navbar = () => {
           <div className="mt-6 flow-root">
             <div className="-my-6 divide-y divide-gray-500/10">
               <div className="space-y-2 py-6">
-                {navigation.map((item) => (
+                {navigation.map(item => (
                   <a
                     key={item.name}
                     href={item.href}

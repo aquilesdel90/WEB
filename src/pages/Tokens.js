@@ -1,4 +1,4 @@
-import Carts from "../assets/carts.png";
+import Carts from '../assets/carts.png';
 
 const Tokens = () => {
   return (
