@@ -10,10 +10,26 @@ import Skins from './pages/Skins';
 import Team from './pages/Team';
 import Tokens from './pages/Tokens';
 import Whatis from './pages/Whatis';
+import { Helmet } from 'react-helmet';
+
+import MetaLogo from './assets/metalogo.png';
 
 function App() {
   return (
     <div className="relative">
+      <Helmet>
+        <title>Gunny Games</title>
+        <meta name="description" content="Gunny Games" />
+        <meta property="og:title" content="Gunny Games" />
+        <meta
+          property="og:description"
+          content="Gunny Games es un shooter en tercera persona."
+        />
+        <meta property="og:image" content={MetaLogo} />
+        <meta property="og:url" content="https://www.gunnygames.com/" />
+
+        {/* Otros metadatos que desees agregar */}
+      </Helmet>
       <Navbar />
       <div id="home">
         <Home />
