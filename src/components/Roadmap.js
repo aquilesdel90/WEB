@@ -12,7 +12,7 @@ import gema5 from '../assets/gemas/gema5.png';
 
 const Roadmap = () => {
   return (
-    <Box>
+    <Box className="p-4">
       <VerticalTimeline>
         <VerticalTimelineElement
           className="vertical-timeline-element--work "

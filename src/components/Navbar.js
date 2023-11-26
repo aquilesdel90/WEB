@@ -1,5 +1,5 @@
 import { Bars3Icon, XMarkIcon } from '@heroicons/react/24/outline';
-import React, { useState } from 'react';
+import React, { useEffect, useState } from 'react';
 import { RiTelegramLine, RiTwitterXFill } from 'react-icons/ri';
 import { Link as ScrollLink, animateScroll as scroll } from 'react-scroll';
 import { Dialog } from '@headlessui/react';
@@ -14,6 +14,29 @@ const navigation = [
 
 const Navbar = () => {
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
+  const [scrolling, setScrolling] = useState(false);
+
+  const handleScroll = () => {
+    if (window.scrollY > 0) {
+      setScrolling(true);
+    } else {
+      setScrolling(false);
+    }
+  };
+
+  useEffect(() => {
+    window.addEventListener('scroll', handleScroll);
+    return () => {
+      window.removeEventListener('scroll', handleScroll);
+    };
+  }, []);
+
+  useEffect(() => {
+    window.addEventListener('scroll', handleScroll);
+    return () => {
+      window.removeEventListener('scroll', handleScroll);
+    };
+  }, []);
 
   const scrollToTop = () => {
     scroll.scrollToTop();
@@ -22,7 +45,11 @@ const Navbar = () => {
 
   return (
     <nav
-      className="w-full fixed z-20 flex items-center justify-center p-6 lg:px-8"
+      className={`w-full fixed z-20 flex items-center justify-center p-6 lg:px-8 transition-all duration-500 ${
+        scrolling
+          ? 'bg-[#5E31B8] bg-opacity-90'
+          : 'bg-transparent bg-opacity-100'
+      }`}
       aria-label="Global"
     >
       <div className="flex lg:flex-1"></div>
@@ -43,15 +70,16 @@ const Navbar = () => {
             to={item.href}
             spy={true}
             smooth={true}
-            offset={-70} // Puedes ajustar este valor según el diseño de tu Navbar
+            offset={-80}
             duration={500}
+            activeClass="text-yellow-500" // Aplica la clase text-yellow-500 cuando está activa
             className="text-sm font-semibold leading-6 text-white cursor-pointer"
           >
             {item.name}
           </ScrollLink>
         ))}
       </div>
-      <div className="hidden lg:flex lg:flex-1 lg:justify-center">
+      <div className="hidden lg:flex lg:flex-1 lg:justify-center gap-4">
         <a href="#" className="text-sm font-semibold leading-6 text-gray-900">
           <span className="text-xl text-white">
             <RiTwitterXFill />

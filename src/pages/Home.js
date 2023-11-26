@@ -19,23 +19,34 @@ export default function Home() {
         />
 
         <div className="sm:mt-8 flex flex-col sm:flex-row items-center justify-center gap-4">
-          <button
-            id="downloadBtn"
-            value="download"
-            className="border border-black flex justify-center items-center rounded-md bg-[#5E31B8] px-3 py-2 text-sm sm:text-base font-semibold text-white shadow-sm hover:bg-[#6b3fc5] focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-indigo-600"
+          <a
+            href="https://link.gunnygames.com/Windows"
+            target="_blank"
+            rel="noreferrer"
           >
-            <FaWindows className="text-xl" />
-            <span className="ml-2">Download for Windows</span>
-          </button>
-
-          <button
-            id="downloadBtn"
-            value="download"
-            className="border border-black mt-4 sm:mt-0 flex justify-center items-center rounded-md bg-[#5E31B8] px-3 py-2 text-sm sm:text-base font-semibold text-white shadow-sm hover:bg-[#6b3fc5] focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-indigo-600"
+            <button
+              id="downloadBtn"
+              value="download"
+              className="border border-black flex justify-center items-center rounded-md bg-[#5E31B8] px-3 py-2 text-sm sm:text-base font-semibold text-white shadow-sm hover:bg-[#6b3fc5] focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-indigo-600"
+            >
+              <FaWindows className="text-xl" />
+              <span className="ml-2">Download for Windows</span>
+            </button>
+          </a>
+          <a
+            href="https://link.gunnygames.com/Mac"
+            target="_blank"
+            rel="noreferrer"
           >
-            <FaApple className="text-xl" />
-            <span className="ml-2">Download for Mac</span>
-          </button>
+            <button
+              id="downloadBtn"
+              value="download"
+              className="border border-black mt-4 sm:mt-0 flex justify-center items-center rounded-md bg-[#5E31B8] px-3 py-2 text-sm sm:text-base font-semibold text-white shadow-sm hover:bg-[#6b3fc5] focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-indigo-600"
+            >
+              <FaApple className="text-xl" />
+              <span className="ml-2">Download for Mac</span>
+            </button>
+          </a>
         </div>
       </div>
     </div>

@@ -39,9 +39,9 @@ function App() {
       <div id="roadmap">
         <Roadmap />
       </div>
-      <div id="team">
+      {/* <div id="team">
         <Team />
-      </div>
+      </div> */}
       <Footer />
     </div>
   );
