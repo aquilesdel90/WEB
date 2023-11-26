@@ -1,7 +1,7 @@
 import React from 'react';
 
-import GameMode1 from '../assets/gamemode1.png';
-import GameMode2 from '../assets/gamemode2.png';
+import GameMode1 from '../assets/gamemode1.jpg';
+import GameMode2 from '../assets/gamemode2.jpg';
 
 const GameModes = () => {
   return (
@@ -33,13 +33,7 @@ const GameModes = () => {
                 backgroundImage: `url(${GameMode1})`,
                 backgroundSize: 'cover',
               }}
-            >
-              <div className="p-4">
-                <h3 className="text-yellow-500 text-lg sm:text-xl text-center md:text-start font-bold uppercase">
-                  Game Mode 1
-                </h3>
-              </div>
-            </div>
+            ></div>
           </div>
 
           <div className="card">
@@ -49,13 +43,7 @@ const GameModes = () => {
                 backgroundImage: `url(${GameMode2})`,
                 backgroundSize: 'cover',
               }}
-            >
-              <div className="p-4">
-                <h3 className="text-yellow-500 text-lg sm:text-xl text-center md:text-start font-bold uppercase">
-                  Game Mode 2
-                </h3>
-              </div>
-            </div>
+            ></div>
           </div>
         </div>
       </div>

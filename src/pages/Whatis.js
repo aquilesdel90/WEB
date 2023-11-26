@@ -7,7 +7,7 @@ const WhatIs = () => {
     {
       id: 1,
       image: 'https://gunnyvideos.s3.amazonaws.com/card1.png',
-      title: 'Card 1',
+      title: '',
       inugi: 'https://gunnyvideos.s3.amazonaws.com/inugibox-1.png',
       description:
         'Collect unique elemental pets and unleash their extraordinary abilities!',
@@ -15,14 +15,14 @@ const WhatIs = () => {
     {
       id: 2,
       image: 'https://gunnyvideos.s3.amazonaws.com/card2.png',
-      title: 'Card 2',
+      title: '',
       inugi: 'https://gunnyvideos.s3.amazonaws.com/inugibox-2.png',
       description: 'Compete online with your favorite companion!',
     },
     {
       id: 3,
       image: 'https://gunnyvideos.s3.amazonaws.com/card3.png',
-      title: 'Card 3',
+      title: '',
       inugi: 'https://gunnyvideos.s3.amazonaws.com/inugibox-3.png',
       description:
         'Customize your pets, characters, and weapons with unique skins!',
@@ -30,7 +30,7 @@ const WhatIs = () => {
     {
       id: 4,
       image: 'https://gunnyvideos.s3.amazonaws.com/card4.png',
-      title: 'Card 4',
+      title: '',
       inugi: 'https://gunnyvideos.s3.amazonaws.com/inugibox-4.png',
       description:
         'Ascend to greatness atop our leaderboard and claim legendary prizes as the ultimate champion!',
@@ -65,13 +65,8 @@ const WhatIs = () => {
 
       <div className="mt-10 mb-20 h-full w-full xl:h-full flex justify-center items-center flex-col text-center text-white z-10">
         <h1 className="mb-4 text-xl sm:text-5xl uppercase font-bold md:mb-8 text-yellow-500">
-          ·¿Qué es gunny?·
+          ·What is Gunny?·
         </h1>
-        <p className="mb-4 text-lg md:text-md sm:text-sm w-[75%]">
-          Anim aute id magna aliqua ad ad non deserunt sunt. Qui irure qui lorem
-          cupidatat commodo. Elit sunt amet fugiat veniam occaecat fugiat
-          aliqua...
-        </p>
 
         <div className="w-100 grid grid-cols-2 sm:grid-cols-2 md:grid-cols-4 lg:grid-cols-4 gap-4 z-10 p-2">
           <Fade cascade damping={0.2}>
