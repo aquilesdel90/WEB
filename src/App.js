@@ -27,8 +27,6 @@ function App() {
         />
         <meta property="og:image" content={MetaLogo} />
         <meta property="og:url" content="https://www.gunnygames.com/" />
-
-        {/* Otros metadatos que desees agregar */}
       </Helmet>
       <Navbar />
       <div id="home">
