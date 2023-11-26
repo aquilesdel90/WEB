@@ -2,6 +2,7 @@ import React from 'react';
 import { Box, Flex, Icon, Image, Link, Stack, Text } from '@chakra-ui/react';
 import { FaTelegram, FaTwitter } from 'react-icons/fa';
 import gunnyLogo from '../assets/gunnylogo.png';
+import { Link as ScrollLink } from 'react-scroll';
 
 const Footer = () => {
   return (

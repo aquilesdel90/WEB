@@ -1,5 +1,7 @@
-import React from "react";
-import Logo from "../assets/logo.png";
+import React from 'react';
+import Logo from '../assets/logo.png';
+import { Link as ScrollLink } from 'react-scroll';
+
 const Footer = () => {
   return (
     <footer className="dark:bg-[#3A2C6A]">
@@ -12,115 +14,69 @@ const Footer = () => {
           </div>
           <div className="grid grid-cols-2 gap-8 sm:gap-6 sm:grid-cols-3">
             <div>
-              <h2 className="mb-6 text-sm font-semibold text-yellow-500 uppercase ">
+              <h2 className="mb-6 text-sm font-semibold text-yellow-500 uppercase">
                 Shortcuts
               </h2>
               <ul className="text-gray-500 dark:text-gray-400 font-medium">
                 <li className="mb-4">
-                  <a href="https://flowbite.com/" className="hover:underline">
-                    Home
-                  </a>
-                </li>
-                <li className="mb-4">
-                  <a
-                    href="https://tailwindcss.com/"
+                  <ScrollLink
+                    to="home"
+                    spy={true}
+                    smooth={true}
+                    offset={-80}
+                    duration={500}
                     className="hover:underline"
                   >
-                    What is Gunny ?
-                  </a>
+                    Home
+                  </ScrollLink>
                 </li>
                 <li className="mb-4">
-                  <a
-                    href="https://tailwindcss.com/"
+                  <ScrollLink
+                    to="whatis"
+                    spy={true}
+                    smooth={true}
+                    offset={-80}
+                    duration={500}
+                    className="hover:underline"
+                  >
+                    What is Gunny?
+                  </ScrollLink>
+                </li>
+                <li className="mb-4">
+                  <ScrollLink
+                    to="factions"
+                    spy={true}
+                    smooth={true}
+                    offset={-80}
+                    duration={500}
                     className="hover:underline"
                   >
                     Factions
-                  </a>
+                  </ScrollLink>
                 </li>
                 <li className="mb-4">
-                  <a
-                    href="https://tailwindcss.com/"
+                  <ScrollLink
+                    to="inugis"
+                    spy={true}
+                    smooth={true}
+                    offset={-80}
+                    duration={500}
                     className="hover:underline"
                   >
                     Inugis
-                  </a>
-                </li>
-
-                <li className="mb-4">
-                  <a
-                    href="https://tailwindcss.com/"
-                    className="hover:underline"
-                  >
-                    Skins
-                  </a>
+                  </ScrollLink>
                 </li>
                 <li className="mb-4">
-                  <a
-                    href="https://tailwindcss.com/"
-                    className="hover:underline"
-                  >
-                    Game modes
-                  </a>
-                </li>
-                <li className="mb-4">
-                  <a
-                    href="https://tailwindcss.com/"
-                    className="hover:underline"
-                  >
-                    Tokens
-                  </a>
-                </li>
-                <li className="mb-4">
-                  <a
-                    href="https://tailwindcss.com/"
+                  <ScrollLink
+                    to="roadmap"
+                    spy={true}
+                    smooth={true}
+                    offset={-80}
+                    duration={500}
                     className="hover:underline"
                   >
                     Roadmap
-                  </a>
-                </li>
-              </ul>
-            </div>
-            <div>
-              <h2 className="mb-6 text-sm font-semibold text-yellow-500 uppercase ">
-                Follow us
-              </h2>
-              <ul className="text-gray-500 dark:text-gray-400 font-medium">
-                <li className="mb-4">
-                  <a href="" className="hover:underline ">
-                    Twitter X
-                  </a>
-                </li>
-                <li className="mb-4">
-                  <a href="" className="hover:underline ">
-                    Discord
-                  </a>
-                </li>
-                <li>
-                  <a href="" className="hover:underline">
-                    Telegram
-                  </a>
-                </li>
-              </ul>
-            </div>
-            <div>
-              <h2 className="mb-6 text-sm font-semibold text-yellow-500 uppercase ">
-                Legal
-              </h2>
-              <ul className="text-gray-500 dark:text-gray-400 font-medium">
-                <li className="mb-4">
-                  <a href="#" className="hover:underline">
-                    Privacy Policy
-                  </a>
-                </li>
-                <li className="mb-4">
-                  <a href="#" className="hover:underline">
-                    Whitepaper
-                  </a>
-                </li>
-                <li>
-                  <a href="#" className="hover:underline">
-                    Terms &amp; Conditions
-                  </a>
+                  </ScrollLink>
                 </li>
               </ul>
             </div>
@@ -129,7 +85,7 @@ const Footer = () => {
         <hr className="my-6 border-gray-200 sm:mx-auto dark:border-gray-700 lg:my-8" />
         <div className="sm:flex sm:items-center sm:justify-between">
           <span className="text-sm text-gray-500 sm:text-center dark:text-gray-400">
-            © 2023{" "}
+            © 2023{' '}
             <a href="https://flowbite.com/" className="hover:underline">
               Gunny Games. All Right Reserveds
             </a>
