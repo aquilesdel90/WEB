@@ -2,7 +2,6 @@
 .roadmap-section {
   max-height: 80vh;
   overflow-y: auto;
-  
 }
 
 /* Estilos específicos para el track del scroll */
@@ -12,7 +11,7 @@
 
 /* Estilos para el thumb (barra deslizante) del scrollbar */
 .roadmap-section::-webkit-scrollbar-thumb {
-  background-color: #5930B7; /* Color del thumb */
+  background-color: #5930b7; /* Color del thumb */
   border-radius: 6px; /* Bordes redondeados */
 }
 
@@ -28,9 +27,9 @@
 
 .timeline-element-work {
   width: 45%;
-  border: 10px solid #5930B7;
+  border: 10px solid #5930b7;
   color: #fff;
-  background-color: #5C567B;
+  background-color: #5c567b;
   display: flex;
   flex-direction: row;
   align-items: center;

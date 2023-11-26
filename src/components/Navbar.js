@@ -72,7 +72,7 @@ const Navbar = () => {
             smooth={true}
             offset={-80}
             duration={500}
-            activeClass="text-yellow-500" // Aplica la clase text-yellow-500 cuando está activa
+            activeClass="text-yellow-500 border-b-2 border-yellow-500" // Aplica la clase text-yellow-500 cuando está activa
             className="text-sm font-semibold leading-6 text-white cursor-pointer"
           >
             {item.name}
