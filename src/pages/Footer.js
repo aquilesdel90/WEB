@@ -17,7 +17,7 @@ const Footer = () => {
               <h2 className="mb-6 text-sm font-semibold text-yellow-500 uppercase">
                 Shortcuts
               </h2>
-              <ul className="text-gray-500 dark:text-gray-400 font-medium">
+              <ul className="text-white-500 dark:text-gray-400 font-medium">
                 <li className="mb-4">
                   <ScrollLink
                     to="home"
