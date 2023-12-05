@@ -9,7 +9,7 @@ const Footer = () => {
         <div className="md:flex md:justify-between">
           <div className="mb-6 md:mb-0">
             <a href="https://www.gunnygames.com/" className="flex items-center">
-              <img src={Logo} className="h-20 me-3" alt="FlowBite Logo" />
+              <img src={Logo} className="h-20 me-3" alt="Gunny Logo" />
             </a>
           </div>
           <div className="grid grid-cols-2 gap-8 sm:gap-6 sm:grid-cols-3">
