@@ -23,7 +23,7 @@ function App() {
         <meta property="og:title" content="Gunny Games" />
         <meta
           property="og:description"
-          content="Gunny Games es un shooter en tercera persona."
+          content="Gunny Games is a third-person shooter using blockchain."
         />
         <meta property="og:image" content={MetaLogo} />
         <meta property="og:url" content="https://www.gunnygames.com/" />
