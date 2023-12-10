@@ -80,12 +80,12 @@ const Navbar = () => {
         ))}
       </div>
       <div className="hidden lg:flex lg:flex-1 lg:justify-center gap-4">
-        <a href="#" className="text-sm font-semibold leading-6 text-gray-900">
+        <a href="https://x.com/Gunny_es" className="text-sm font-semibold leading-6 text-gray-900">
           <span className="text-xl text-white">
             <RiTwitterXFill />
           </span>
         </a>
-        <a href="#" className="text-sm font-semibold leading-6 text-gray-900">
+        <a href="https://t.me/gunnygames" className="text-sm font-semibold leading-6 text-gray-900">
           <span className="text-xl text-white">
             <RiTelegramLine />
           </span>
