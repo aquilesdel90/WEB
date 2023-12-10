@@ -9,7 +9,6 @@ import Gema3 from '../assets/icontimeline-3.png';
 import Gema4 from '../assets/icontimeline-4.png';
 import Gema5 from '../assets/icontimeline-5.png';
 
-import ImageRandom from '../assets/skin.png';
 const Roadmap = () => {
   return (
     <div className="relative h-full xl:h-[100%] w-[100%] flex justify-center items-center">

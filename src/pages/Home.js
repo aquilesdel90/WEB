@@ -1,10 +1,11 @@
 import { useState } from 'react';
 
 import { FaWindows, FaApple } from 'react-icons/fa';
+import Leaderboard from '../components/Leaderboard';
 
 export default function Home() {
   return (
-    <div className="relative w-[100%] h-[100%] sm:h-[100vh] flex justify-center items-center">
+    <div className="relative w-[100%] h-[100%] sm:h-[100vh] flex justify-center items-center flex-col">
       <img
         src="https://gunnyvideos.s3.amazonaws.com/background_01.jpg"
         alt="bg home"

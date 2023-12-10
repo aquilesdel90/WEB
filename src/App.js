@@ -13,6 +13,8 @@ import Whatis from './pages/Whatis';
 import { Helmet } from 'react-helmet';
 
 import MetaLogo from './assets/metalogo.png';
+import Leaderboard from './components/Leaderboard';
+import Ranked from './pages/Ranked';
 
 function App() {
   return (
@@ -52,6 +54,10 @@ function App() {
       </div>
       <div id="roadmap">
         <Roadmap />
+      </div>
+
+      <div id="ranked">
+        <Ranked />
       </div>
       {/* <div id="team">
         <Team />

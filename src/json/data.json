@@ -1,0 +1,14 @@
+{
+  "personas": [
+    { "id": 1, "nombre": "Ana", "puntuacion": 85 },
+    { "id": 2, "nombre": "Carlos", "puntuacion": 92 },
+    { "id": 3, "nombre": "Laura", "puntuacion": 78 },
+    { "id": 4, "nombre": "David", "puntuacion": 96 },
+    { "id": 5, "nombre": "Elena", "puntuacion": 89 },
+    { "id": 6, "nombre": "Francisco", "puntuacion": 82 },
+    { "id": 7, "nombre": "Isabel", "puntuacion": 90 },
+    { "id": 8, "nombre": "Javier", "puntuacion": 88 },
+    { "id": 9, "nombre": "Maria", "puntuacion": 94 },
+    { "id": 10, "nombre": "Pedro", "puntuacion": 91 }
+  ]
+}
