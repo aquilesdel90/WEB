@@ -59,10 +59,10 @@ const Leaderboard = () => {
               <td className="px-6 py-4 font-medium text-gray-900 whitespace-nowrap dark:text-white">
                 {persona.posicion}
               </td>
+              {/*Cambiar persona.title por wallet o lo que sea que vayas a usar para mostrar el dato*/}
+              <td className="px-6 py-4">{persona.wallet}</td>
               {/*Cambiar title por wallet o lo que sea que vayas a usar para mostrar el dato*/}
-              <td className="px-6 py-4">{persona.title}</td>
-              {/*Cambiar title por wallet o lo que sea que vayas a usar para mostrar el dato*/}
-              <td className="px-6 py-4">{persona.puntuacion}</td>
+              <td className="px-6 py-4">{persona.id}</td>
             </tr>
           ))}
         </tbody>
