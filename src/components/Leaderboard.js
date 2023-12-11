@@ -4,6 +4,36 @@ import axios from 'axios';
 import Pagination from '@mui/material/Pagination';
 import Stack from '@mui/material/Stack';
 
+/*
+instalar el algosdk desde : https://github.com/algorand/js-algorand-sdk/
+https://www.npmjs.com/package/algosdk
+
+
+
+var algosdk = require("algosdk")
+
+const server = 'https://mainnet-idx.algonode.cloud';
+const indexerClient = new algosdk.Indexer("", server, 443);
+ 
+const assetId = 1259645348;
+
+
+(async () => {
+  const assetBalances = await indexerClient
+  .lookupAssetBalances(assetId)
+  .currencyLessThan(100000)
+  .currencyGreaterThan(1)
+  .limit(100)
+  .do();
+  console.log(assetBalances);
+  console.log(assetBalances.balances.sort((a, b) => b.amount - a.amount));
+  
+})().catch((e) => {
+  console.log(e);
+});
+
+*/
+
 const Leaderboard = () => {
   const [data, setData] = useState([]);
   const [page, setPage] = useState(1);
