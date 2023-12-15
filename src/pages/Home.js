@@ -35,18 +35,17 @@ export default function Home() {
             </button>
           </a>
           <a
-            href=""
+            href="https://mygunnypublictestbucket.s3.amazonaws.com/Gunny_v0.2.0+MAC.zip"
             target="_blank"
             rel="noreferrer"
           >
             <button
-              disabled={true}
               id="downloadBtn"
               value="download"
               className="border border-black mt-4 sm:mt-0 flex justify-center items-center rounded-md bg-[#5E31B8] px-3 py-2 text-sm sm:text-base font-semibold text-white shadow-sm hover:bg-[#6b3fc5] focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-indigo-600"
             >
               <FaApple className="text-xl" />
-              <span className="ml-2">Download for Mac (coming soon!)</span>
+              <span className="ml-2">Download for Mac</span>
             </button>
           </a>
         </div>
