@@ -1,40 +1,14 @@
 import React, { useEffect, useState } from 'react';
 import axios from 'axios';
-
 import Pagination from '@mui/material/Pagination';
 import Stack from '@mui/material/Stack';
-
-/*
-instalar el algosdk desde : https://github.com/algorand/js-algorand-sdk/
-https://www.npmjs.com/package/algosdk
-
-
-
-var algosdk = require("algosdk")
-
-const server = 'https://mainnet-idx.algonode.cloud';
-const indexerClient = new algosdk.Indexer("", server, 443);
- 
-const assetId = 1259645348;
-
-
-(async () => {
-  const assetBalances = await indexerClient
-  .lookupAssetBalances(assetId)
-  .currencyLessThan(100000)
-  .currencyGreaterThan(1)
-  .limit(100)
-  .do();
-  console.log(assetBalances);
-  console.log(assetBalances.balances.sort((a, b) => b.amount - a.amount));
-  
-})().catch((e) => {
-  console.log(e);
-});
-
-*/
+import algosdk from 'algosdk';
 
 const Leaderboard = () => {
+  const server = 'https://mainnet-idx.algonode.cloud';
+  const indexerClient = new algosdk.Indexer('', server, 443);
+  const assetId = 1259645348;
+
   const [data, setData] = useState([]);
   const [page, setPage] = useState(1);
   const itemsPerPage = 5;
@@ -42,17 +16,29 @@ const Leaderboard = () => {
   useEffect(() => {
     const fetchDataFromAPI = async () => {
       try {
-        const response = await axios.get(
-          'https://jsonplaceholder.typicode.com/posts'
-        );
-        setData(response.data);
+        const assetBalances = await indexerClient
+          .lookupAssetBalances(assetId)
+          .currencyLessThan(100000)
+          .currencyGreaterThan(1)
+          .limit(100)
+          .do();
+
+        const leaderboardData = assetBalances.balances
+          .sort((a, b) => b.amount - a.amount)
+          .map((balance, index) => ({
+            id: index + 1,
+            wallet: balance.address,
+            puntuacion: balance.amount,
+          }));
+
+        setData(leaderboardData);
       } catch (error) {
-        console.error('Error al obtener datos de la API:', error);
+        console.error('Error al obtener datos de Algorand:', error);
       }
     };
 
     fetchDataFromAPI();
-  }, []);
+  }, [indexerClient, assetId]);
 
   const indexOfLastItem = page * itemsPerPage;
   const indexOfFirstItem = indexOfLastItem - itemsPerPage;
@@ -89,10 +75,8 @@ const Leaderboard = () => {
               <td className="px-6 py-4 font-medium text-gray-900 whitespace-nowrap dark:text-white">
                 {persona.posicion}
               </td>
-              {/*Cambiar persona.title por wallet o lo que sea que vayas a usar para mostrar el dato*/}
               <td className="px-6 py-4">{persona.wallet}</td>
-              {/*Cambiar title por wallet o lo que sea que vayas a usar para mostrar el dato*/}
-              <td className="px-6 py-4">{persona.id}</td>
+              <td className="px-6 py-4">{persona.puntuacion}</td>
             </tr>
           ))}
         </tbody>
