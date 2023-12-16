@@ -12,6 +12,7 @@ const Leaderboard = () => {
     () => new algosdk.Indexer('', server, 443),
     [server]
   );
+  const isDarkMode = window.matchMedia('(prefers-color-scheme: dark)').matches;
 
   const [data, setData] = useState([]);
   const [page, setPage] = useState(1);
@@ -63,7 +64,7 @@ const Leaderboard = () => {
   return (
     <div className="relative overflow-x-auto shadow-md sm:rounded-lg">
       <table className="w-full text-sm text-left text-white ">
-        <thead className="text-xs uppercase bg-gray-50 dark:bg-[#5E31B8]">
+        <thead className="text-xs uppercase bg-[#5E31B8]">
           <tr>
             <th className="px-6 py-3 w-10">Position</th>
             <th className="px-6 py-3 w-60 text-center">Address</th>
@@ -74,9 +75,9 @@ const Leaderboard = () => {
           {tablaPosiciones.map(persona => (
             <tr
               key={persona.id}
-              className="bg-white border-b dark:bg-gray-800 dark:border-gray-700 hover:bg-gray-50 dark:hover:bg-gray-600"
+              className=" border-b bg-gray-800 border-gray-700 hover:bg-gray-50 hover:bg-gray-600"
             >
-              <td className="px-6 py-4 font-medium text-gray-900 whitespace-nowrap dark:text-white">
+              <td className="px-6 py-4 font-medium  whitespace-nowrap text-white">
                 {persona.posicion}
               </td>
               <td className="px-6 py-4">{persona.wallet}</td>
