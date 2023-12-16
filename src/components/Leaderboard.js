@@ -1,4 +1,4 @@
-import React, { useEffect, useState } from 'react';
+import React, { useEffect, useState, useMemo } from 'react';
 import axios from 'axios';
 import Pagination from '@mui/material/Pagination';
 import Stack from '@mui/material/Stack';
@@ -6,8 +6,12 @@ import algosdk from 'algosdk';
 
 const Leaderboard = () => {
   const server = 'https://mainnet-idx.algonode.cloud';
-  const indexerClient = new algosdk.Indexer('', server, 443);
   const assetId = 1259645348;
+
+  const indexerClient = useMemo(
+    () => new algosdk.Indexer('', server, 443),
+    [server]
+  );
 
   const [data, setData] = useState([]);
   const [page, setPage] = useState(1);
@@ -61,8 +65,8 @@ const Leaderboard = () => {
       <table className="w-full text-sm text-left text-white ">
         <thead className="text-xs uppercase bg-gray-50 dark:bg-[#5E31B8]">
           <tr>
-            <th className="px-6 py-3 w-10">Posición</th>
-            <th className="px-6 py-3 w-60 text-center">Wallet</th>
+            <th className="px-6 py-3 w-10">Position</th>
+            <th className="px-6 py-3 w-60 text-center">Address</th>
             <th className="px-6 py-3 w-10">Puntuación</th>
           </tr>
         </thead>
