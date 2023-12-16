@@ -4,11 +4,14 @@ import { Link as ScrollLink } from 'react-scroll';
 
 const Footer = () => {
   return (
-    <footer className="dark:bg-[#3A2C6A]">
+    <footer className="bg-[#3A2C6A]">
       <div className="mx-auto w-full max-w-screen-xl p-4 py-6 lg:py-8">
         <div className="md:flex md:justify-between">
           <div className="mb-6 md:mb-0">
-            <a href="https://www.gunnygames.com/#" className="flex items-center">
+            <a
+              href="https://www.gunnygames.com/#"
+              className="flex items-center"
+            >
               <img src={Logo} className="h-20 me-3" alt="Gunny Logo" />
             </a>
           </div>
@@ -17,7 +20,7 @@ const Footer = () => {
               <h2 className="mb-6 text-sm font-semibold text-yellow-500 uppercase">
                 Shortcuts
               </h2>
-              <ul className="text-white-500 dark:text-gray-400 font-medium">
+              <ul className="text-white-500 text-white  font-medium">
                 <li className="mb-4">
                   <ScrollLink
                     to="home"
@@ -25,7 +28,7 @@ const Footer = () => {
                     smooth={true}
                     offset={-80}
                     duration={500}
-                    className="hover:underline"
+                    className="hover:underline hover:text-yellow-500 cursor-pointer "
                   >
                     Home
                   </ScrollLink>
@@ -37,7 +40,7 @@ const Footer = () => {
                     smooth={true}
                     offset={-80}
                     duration={500}
-                    className="hover:underline"
+                    className="hover:underline hover:text-yellow-500 cursor-pointer"
                   >
                     What is Gunny?
                   </ScrollLink>
@@ -49,7 +52,7 @@ const Footer = () => {
                     smooth={true}
                     offset={-80}
                     duration={500}
-                    className="hover:underline"
+                    className="hover:underline hover:text-yellow-500 cursor-pointer"
                   >
                     Factions
                   </ScrollLink>
@@ -61,7 +64,7 @@ const Footer = () => {
                     smooth={true}
                     offset={-80}
                     duration={500}
-                    className="hover:underline"
+                    className="hover:underline hover:text-yellow-500 cursor-pointer"
                   >
                     Inugis
                   </ScrollLink>
@@ -73,7 +76,7 @@ const Footer = () => {
                     smooth={true}
                     offset={-80}
                     duration={500}
-                    className="hover:underline"
+                    className="hover:underline hover:text-yellow-500 cursor-pointer"
                   >
                     Roadmap
                   </ScrollLink>
@@ -93,7 +96,7 @@ const Footer = () => {
           <div className="flex mt-4 sm:justify-center sm:mt-0">
             <a
               href="https://discord.gg/SX6bkkHcAD"
-              className="text-gray-500 hover:text-gray-900 dark:hover:text-white ms-5"
+              className="text-white hover:text-yellow-500  ms-5"
             >
               <svg
                 className="w-4 h-4"
@@ -108,7 +111,7 @@ const Footer = () => {
             </a>
             <a
               href="https://x.com/Gunny_es"
-              className="text-gray-500 hover:text-gray-900 dark:hover:text-white ms-5"
+              className="text-white hover:text-yellow-500 ms-5"
             >
               <svg
                 className="w-4 h-4"
