@@ -1,5 +1,5 @@
 import React, { useEffect, useState, useMemo } from 'react';
-import axios from 'axios';
+
 import Pagination from '@mui/material/Pagination';
 import Stack from '@mui/material/Stack';
 import algosdk from 'algosdk';
@@ -17,6 +17,9 @@ const Leaderboard = () => {
 
   const [data, setData] = useState([]);
   const [page, setPage] = useState(1);
+
+  const [focused, setFocused] = useState(false);
+
   const itemsPerPage = 5;
   const [isMobile, setIsMobile] = useState(window.innerWidth < 768);
 
@@ -85,7 +88,11 @@ const Leaderboard = () => {
           type="text"
           value={searchTerm}
           onChange={e => setSearchTerm(e.target.value)}
-          className="px-2 py-1 border rounded-md text-gray-800"
+          onFocus={() => setFocused(true)}
+          onBlur={() => setFocused(false)}
+          className={`px-2 py-1 border rounded-md text-gray-800 focus:outline-none ${
+            focused ? 'border-[#5E31B8]' : 'border-gray-300'
+          }`}
           placeholder="Search your Wallet"
         />
       </div>
@@ -94,7 +101,7 @@ const Leaderboard = () => {
           <tr>
             <th className="px-4 py-2 sm:w-10">Position</th>
             <th className="px-4 py-2 sm:w-60 text-center">Address</th>
-            <th className="px-4 py-2 sm:w-10">Puntuación</th>
+            <th className="px-4 py-2 sm:w-10">Score</th>
           </tr>
         </thead>
         <tbody>
