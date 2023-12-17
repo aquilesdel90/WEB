@@ -17,6 +17,19 @@ const Leaderboard = () => {
   const [data, setData] = useState([]);
   const [page, setPage] = useState(1);
   const itemsPerPage = 5;
+  const [isMobile, setIsMobile] = useState(window.innerWidth < 768);
+
+  useEffect(() => {
+    const handleResize = () => {
+      setIsMobile(window.innerWidth < 768);
+    };
+
+    window.addEventListener('resize', handleResize);
+
+    return () => {
+      window.removeEventListener('resize', handleResize);
+    };
+  }, []);
 
   useEffect(() => {
     const fetchDataFromAPI = async () => {
@@ -62,32 +75,38 @@ const Leaderboard = () => {
   };
 
   return (
-    <div className="relative overflow-x-auto shadow-md sm:rounded-lg">
-      <table className="w-full text-sm text-left text-white ">
+    <div className="relative overflow-x-auto overflow-y-hidden shadow-md sm:rounded-lg">
+      <table className="w-full text-sm text-left text-white table-auto">
         <thead className="text-xs uppercase bg-[#5E31B8]">
           <tr>
-            <th className="px-6 py-3 w-10">Position</th>
-            <th className="px-6 py-3 w-60 text-center">Address</th>
-            <th className="px-6 py-3 w-10">Puntuación</th>
+            <th className="px-4 py-2 sm:w-10">Position</th>
+            <th className="px-4 py-2 sm:w-60 text-center">Address</th>
+            <th className="px-4 py-2 sm:w-10">Puntuación</th>
           </tr>
         </thead>
         <tbody>
           {tablaPosiciones.map(persona => (
             <tr
               key={persona.id}
-              className=" border-b bg-gray-800 border-gray-700 hover:bg-gray-50 hover:bg-gray-600"
+              className="border-b bg-gray-800 border-gray-700  hover:bg-gray-600"
             >
-              <td className="px-6 py-4 font-medium  whitespace-nowrap text-white">
+              <td className="px-4 py-2 sm:font-medium text-white">
                 {persona.posicion}
               </td>
-              <td className="px-6 py-4">{persona.wallet}</td>
-              <td className="px-6 py-4">{persona.puntuacion}</td>
+              <td className="px-4 py-2 sm:text-center">
+                <div className="text-ellipsis">
+                  {isMobile
+                    ? persona.wallet.substring(0, 16) + '...'
+                    : persona.wallet}
+                </div>
+              </td>
+              <td className="px-4 py-2">{persona.puntuacion}</td>
             </tr>
           ))}
         </tbody>
       </table>
 
-      <Stack spacing={2} className="p-2 flex justify-center items-center ">
+      <Stack spacing={2} className="p-2 flex justify-center items-center">
         <Pagination
           count={Math.ceil(data.length / itemsPerPage)}
           color="secondary"

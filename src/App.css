@@ -34,3 +34,8 @@
   flex-direction: row;
   align-items: center;
 }
+.text-ellipsis {
+  overflow: hidden;
+  white-space: nowrap;
+  text-overflow: ellipsis;
+}
