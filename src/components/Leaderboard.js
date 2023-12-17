@@ -12,7 +12,8 @@ const Leaderboard = () => {
     () => new algosdk.Indexer('', server, 443),
     [server]
   );
-  const isDarkMode = window.matchMedia('(prefers-color-scheme: dark)').matches;
+
+  const [searchTerm, setSearchTerm] = useState('');
 
   const [data, setData] = useState([]);
   const [page, setPage] = useState(1);
@@ -65,6 +66,9 @@ const Leaderboard = () => {
   const tablaPosiciones = currentItems
     .slice()
     .sort((a, b) => b.puntuacion - a.puntuacion)
+    .filter(persona =>
+      persona.wallet.toLowerCase().includes(searchTerm.toLowerCase())
+    )
     .map((persona, index) => ({
       ...persona,
       posicion: indexOfFirstItem + index + 1,
@@ -76,6 +80,15 @@ const Leaderboard = () => {
 
   return (
     <div className="relative overflow-x-auto overflow-y-hidden shadow-md sm:rounded-lg">
+      <div className="mb-4">
+        <input
+          type="text"
+          value={searchTerm}
+          onChange={e => setSearchTerm(e.target.value)}
+          className="px-2 py-1 border rounded-md text-gray-800"
+          placeholder="Search your Wallet"
+        />
+      </div>
       <table className="w-full text-sm text-left text-white table-auto">
         <thead className="text-xs uppercase bg-[#5E31B8]">
           <tr>
@@ -85,24 +98,32 @@ const Leaderboard = () => {
           </tr>
         </thead>
         <tbody>
-          {tablaPosiciones.map(persona => (
-            <tr
-              key={persona.id}
-              className="border-b bg-gray-800 border-gray-700  hover:bg-gray-600"
-            >
-              <td className="px-4 py-2 sm:font-medium text-white">
-                {persona.posicion}
+          {tablaPosiciones.length === 0 ? (
+            <tr>
+              <td className="px-4 py-2 text-gray-800" colSpan="3">
+                There is no matching wallet
               </td>
-              <td className="px-4 py-2 sm:text-center">
-                <div className="text-ellipsis">
-                  {isMobile
-                    ? persona.wallet.substring(0, 16) + '...'
-                    : persona.wallet}
-                </div>
-              </td>
-              <td className="px-4 py-2">{persona.puntuacion}</td>
             </tr>
-          ))}
+          ) : (
+            tablaPosiciones.map(persona => (
+              <tr
+                key={persona.id}
+                className="border-b bg-gray-800 border-gray-700  hover:bg-gray-600"
+              >
+                <td className="px-4 py-2 sm:font-medium text-white">
+                  {persona.posicion}
+                </td>
+                <td className="px-4 py-2 sm:text-center">
+                  <div className="text-ellipsis">
+                    {isMobile
+                      ? persona.wallet.substring(0, 16) + '...'
+                      : persona.wallet}
+                  </div>
+                </td>
+                <td className="px-4 py-2">{persona.puntuacion}</td>
+              </tr>
+            ))
+          )}
         </tbody>
       </table>
 
