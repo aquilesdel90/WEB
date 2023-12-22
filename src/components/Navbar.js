@@ -9,7 +9,9 @@ const navigation = [
   { name: 'What is Gunny?', href: 'whatis' },
   { name: 'Factions', href: 'factions' },
   { name: 'Inugis', href: 'inugis' },
+  { name: 'Customization', href: 'skins' },
   { name: 'Roadmap', href: 'roadmap' },
+  { name: 'Leaderboard', href: 'ranked' },
 ];
 
 const Navbar = () => {
