@@ -5,7 +5,6 @@ import GoraTournamentTitle from '../assets/webGoraTournament.png';
 const Ranked = () => {
   return (
     <div className="relative h-[100vh] flex justify-center items-center">
-      <a id="leaderboard"></a>
       <img
         src="https://gunnyvideos.s3.amazonaws.com/background_05.jpg"
         alt="bg home"
