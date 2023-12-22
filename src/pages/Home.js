@@ -49,6 +49,15 @@ export default function Home() {
             </button>
           </a>
         </div>
+        <div className="mt-10 flex items-center justify-center gap-x-6">
+          <a
+            href="https://summit.gunnygames.com/"
+            className="rounded-md bg-indigo-600 px-3.5 py-2.5 text-sm font-semibold text-white shadow-sm hover:bg-indigo-500 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-indigo-600"
+          >
+            Join Us (Opt-In)!
+          </a>
+          <button><img src="https://perawallet.s3-eu-west-3.amazonaws.com/media-kit/pera-logomark-black.svg" height="20"/>Opt-in</button>
+        </div>
       </div>
     </div>
   );
