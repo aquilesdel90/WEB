@@ -51,7 +51,7 @@ export default function Home() {
         </div>
         <div className="mt-10 flex items-center justify-center gap-x-6">
           <a
-            href="https://summit.gunnygames.com/"
+            href="https://login.gunnygames.com/"
             className="rounded-md bg-yellow-400 px-3.5 py-2.5 text-sm font-semibold text-white shadow-sm hover:bg-yellow-300 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-yellow-400"
           >
             Join Us (Opt-In)!
