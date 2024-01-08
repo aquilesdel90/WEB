@@ -15,10 +15,6 @@ const Ranked = () => {
         <h2 className="mb-4 text-5xl uppercase font-bold text-[#5930B7]">
           ··Rank PvP··
         </h2>
-        <img
-          src={GoraTournamentTitle}
-          alt="Gora Tournament Title"
-        />
         <Leaderboard />
       </div>
     </div>
