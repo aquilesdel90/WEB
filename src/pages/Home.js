@@ -35,7 +35,7 @@ export default function Home() {
             </button>
           </a>
           <a
-            href="https://mygunnypublictestbucket.s3.amazonaws.com/Gunny_v0.2.0+MAC.zip"
+            href="link.gunnygames.com/Mac"
             target="_blank"
             rel="noreferrer"
           >
